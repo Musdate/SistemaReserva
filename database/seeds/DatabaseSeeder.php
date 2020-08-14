@@ -2,15 +2,19 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        // $this->call(UserSeeder::class);
+class DatabaseSeeder extends Seeder{
+    
+    public function run(){
+
+        //Vaciar tablas antes de insertar
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
+        DB::table('users')->truncate();
+        DB::table('laboratorios')->truncate();
+        DB::table('tipousuario')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
+
+        $this->call(TipoUsuarioSeed::class);
+        $this->call(CuentasSeed::class);
+        $this->call(LaboratorioSeed::class);
     }
 }
