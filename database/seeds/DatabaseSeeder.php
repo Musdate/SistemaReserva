@@ -8,6 +8,7 @@ class DatabaseSeeder extends Seeder{
 
         //Vaciar tablas antes de insertar
         DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
+        DB::table('reservas')->truncate();
         DB::table('users')->truncate();
         DB::table('laboratorios')->truncate();
         DB::table('tipousuario')->truncate();

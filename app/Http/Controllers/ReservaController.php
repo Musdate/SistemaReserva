@@ -2,26 +2,39 @@
 
 namespace App\Http\Controllers;
 
+use App\Reserva;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReservaController extends Controller{
     
-    public function reservarModulos($rut){
+    public function index(){
+        $reservas = DB::table('reservas')->get();
+        $users = DB::table('users')->get();
+
+        return view('reserva.listado', compact('reservas', 'users'));
+    }
+
+    public function create(){
+
+        return view('reserva.agregar');
+    }
+
+    public function store(){
 
         $data = request()->validate([
             'rutUsuario' => 'required',
-            'rutEncargado' => 'required',
             'codigoLab' => 'required',
             'modulosReservados' => 'required'
         ]);
 
         Reserva::create([
-            'rutUsuario' => $rut,
-            'rutEncargado' => '123000',
-            'codigoLab' => '123000',
+            'rutUsuario' => $data['rutUsuario'],
+            'codigoLab' => $data['codigoLab'],
             'modulosReservados' => $data['modulosReservados']
         ]);
 
         return back()->with('mensaje', 'Reserva Exitosa');
     }
+
 }

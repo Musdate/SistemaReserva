@@ -11,14 +11,12 @@ class CreateReservasTable extends Migration{
         Schema::create('reservas', function (Blueprint $table){
             $table->id();
             $table->string('rutUsuario')->index();
-            $table->string('rutEncargado')->index();
             $table->string('codigoLab')->index();
-            $table->string('modulosReservados', 20);
+            $table->string('moduloReservado', 20);
             $table->timestamps();
 
             //Relaciones
             $table->foreign('rutUsuario')->references('rut')->on('users');
-            $table->foreign('rutEncargado')->references('rut')->on('users');
             $table->foreign('codigoLab')->references('codigoLab')->on('laboratorios');
             
         });

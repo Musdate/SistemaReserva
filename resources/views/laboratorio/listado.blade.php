@@ -11,21 +11,21 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Codigo Laboratorio</th>
-                    <th scope="col">Nombre de la Sala</th>
-                    <th scope="col">Capacidad Máxima</th>
-                    <th scope="col">Tipo de Laboratorio</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
+                    <th scope="col" style="text-align: center;">Nombre de la Sala</th>
+                    <th scope="col" style="text-align: center;">Capacidad Máxima</th>
+                    <th scope="col" style="text-align: center;">Tipo de Laboratorio</th>
+                    <th scope="col" style="text-align: center;">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($labs as $lab)
                     <tr>
-                        <th scope="row">{{ $lab->codigoLab }}</th>
-                        <td>{{ $lab->nombreSala}}</td>
-                        <td>{{ $lab->capacidadMax}}</td>
-                        <td>{{ $lab->tipoLab}}</td>
-                        <td>
+                        <th scope="row" style="text-align: center;">{{ $lab->codigoLab }}</th>
+                        <td style="text-align: center;">{{ $lab->nombreSala}}</td>
+                        <td style="text-align: center;">{{ $lab->capacidadMax}}</td>
+                        <td style="text-align: center;">{{ $lab->tipoLab}}</td>
+                        <td style="text-align: center;">
                             <a href="{{ route('laboratorio.show.route', $lab->codigoLab) }}">
                                 <button type="submit" class="btn btn-primary">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -53,21 +53,21 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Codigo Laboratorio</th>
-                <th scope="col">Nombre de la Sala</th>
-                <th scope="col">Capacidad Máxima</th>
-                <th scope="col">Tipo de Laboratorio</th>
-                <th scope="col">Acciones</th>
+                <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
+                <th scope="col" style="text-align: center;">Nombre de la Sala</th>
+                <th scope="col" style="text-align: center;">Capacidad Máxima</th>
+                <th scope="col" style="text-align: center;">Tipo de Laboratorio</th>
+                <th scope="col" style="text-align: center;">Acciones</th>
             </tr>
         </thead>
         <tbody>
             @foreach ($labs as $lab)
                 <tr>
-                    <th scope="row">{{ $lab->codigoLab }}</th>
-                    <td>{{ $lab->nombreSala}}</td>
-                    <td>{{ $lab->capacidadMax}}</td>
-                    <td>{{ $lab->tipoLab}}</td>
-                    <td>
+                    <th scope="row" style="text-align: center;">{{ $lab->codigoLab }}</th>
+                    <td style="text-align: center;">{{ $lab->nombreSala}}</td>
+                    <td style="text-align: center;">{{ $lab->capacidadMax}}</td>
+                    <td style="text-align: center;">{{ $lab->tipoLab}}</td>
+                    <td style="text-align: center;">
                         <a href="{{ route('laboratorio.show.route', $lab->codigoLab) }}">
                             <button type="submit" class="btn btn-primary">
                                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -86,9 +86,9 @@
                                 </button>
                             </a>
 
-                            <a title="Borrar" href="{{ route('laboratorio.delete.route', $lab->codigoLab) }}" title="delete" class="delete" onclick="
-                                return confirm('ESTA SEGURO QUE DESEA ELIMINAR ESTE LABORATORIO?')">
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            <a href="{{ route('laboratorio.delete.route', $lab->codigoLab) }}" class="delete"
+                            onclick="return confirm('¿Está seguro que desea ELIMINAR este Laboratorio?')">
+                                <button type="button" class="btn btn-danger">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="black" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
                                         <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>

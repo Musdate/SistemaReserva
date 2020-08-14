@@ -47,7 +47,8 @@
 
             <div class="links">
                 <a href="{{ url('/Laboratorios') }}">Ver Laboratorios</a>
-                <a href="{{ url('#') }}">Ver Reservas</a>
+                <a href="{{ url('/Reservas') }}">Ver Reservas</a>
+                <a href="{{ url('/AgregarReserva') }}">Agregar Reservas</a>
             </div>
 
         </div>
