@@ -100,7 +100,7 @@
             @endif
 
             <!-- Si es Encargado -->
-            @if ( Auth::user()->tipoUsuarioID == '1'  )
+            @if ( Auth::user()->tipoUsuarioID == '1' )
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/AgregarUsuario') }}">Agregar Usuario</a>

@@ -6,9 +6,9 @@
 
     <div class="container">
       <div style="height:50px"></div>
-      <h1>Titulos...</h1>
+      <h1 style="text-align: center;">Calendario de Reservas</h1>
 
-      <hr>
+      <a href="{{ asset('/Evento/form') }}"><button type="submit" class="btn btn-outline-danger">Crear un evento</button></a><hr>
 
       <div class="row header-calendar"  >
 

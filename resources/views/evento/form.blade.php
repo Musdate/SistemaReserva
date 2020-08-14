@@ -1,16 +1,12 @@
 @extends('layouts.app')
 
-@section('title', "Agregar Laboratorio")
+@section('title', "Agregar Reserva")
 
 @section('content')
 
-    <div class="container">
-      <div style="height:50px"></div>
-      <h1>Evento</h1>
-      
-      <hr>
+    </br></br>
 
-      @if (count($errors) > 0)
+    @if (count($errors) > 0)
         <div class="alert alert-danger">
          <button type="button" class="close" data-dismiss="alert">×</button>
          <ul>
@@ -27,28 +23,39 @@
        </div>
        @endif
 
+    <div class="card border-primary">
 
-      <div class="col-md-6">
-        <form action="{{ asset('/Evento/create/') }}" method="post">
-          @csrf
-          <div class="fomr-group">
-            <label>Titulo</label>
-            <input type="text" class="form-control" name="titulo">
-          </div>
-          <div class="fomr-group">
-            <label>Descripcion del Evento</label>
-            <input type="text" class="form-control" name="descripcion">
-          </div>
-          <div class="fomr-group">
-            <label>Fecha</label>
-            <input type="date" class="form-control" name="fecha">
-          </div>
-          <br>
-          <input type="submit" class="btn btn-info" value="Guardar">
-        </form></br>
-        <a href="{{ asset('/Evento/index') }}"><button type="submit" class="btn btn-primary">Atras</button></a>
-      </div>
+        <div class="card-header border-primary"><h2>Agregar reserva</h2></div>
 
+        <div class="card-body">
+
+            <form method="POST" action="{{ url('/AgregarReserva') }}">
+                @csrf
+                <div class="fomr-group">
+                  <label>Rut Usuario:</label>
+                  <input type="text" readonly class="form-control" name="rutUsuario" value="{{old('rut', Auth::user()->rut)}}"></br>
+                </div>
+
+                <div class="fomr-group">
+                  <label>Codigo Laboratorio:</label>
+                  <input type="text" class="form-control" name="codigoLab"></br>
+                </div>
+
+                <div class="fomr-group">
+                  <label>Motivo de la Reserva:</label>
+                  <input type="text" class="form-control" name="motivoReserva"></br>
+                </div>                
+
+                <div class="fomr-group">
+                  <label>Fecha:</label>
+                  <input type="date" class="form-control" name="moduloReservado">
+                </div>
+
+                </br><button type="submit" class="btn btn-primary" style="width: 130px;">Guardar</button></br></br>
+
+            </form>
+
+        </div>
     </div>
 
 @endsection
