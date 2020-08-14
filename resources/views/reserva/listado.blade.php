@@ -1,31 +1,41 @@
 @extends('layouts.app')
 
-@section('title', "Encargados")
+@section('title', "Reservas")
 
 @section('content')
 
-    </br><h1>Listado de Encargados</h1></br>
+    </br><h1>Listado de Reservas</h1></br>
 
     <table class="table">
         <thead>
             <tr>
-                <th scope="col" style="text-align: center;">Rut</th>
-                <th scope="col" style="text-align: center;">Nombre</th>
-                <th scope="col" style="text-align: center;">Email</th>
+                <th scope="col" style="text-align: center;">Rut Usuario</th>
+                <th scope="col" style="text-align: center;">Rol</th>
+                <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
+                <th scope="col" style="text-align: center;">Modulo Reservado</th>
                 <th scope="col" style="text-align: center;">Acciones</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($users as $user)
-                @if($user->tipoUsuarioID == '1')
+            @foreach ($reservas as $reserva)
+                
                     <tr>
-                        <th scope="row" style="text-align: center;">{{ $user->rut }}</th>
-                        <td style="text-align: center;">{{ $user->nombre}}</td>
-                        <td style="text-align: center;">{{ $user->email}}</td>
+                        <th scope="row" style="text-align: center;">{{ $reserva->rutUsuario }}</th>
+                        @foreach ($users as $user)
+                            @if ($user->rut == $reserva->rutUsuario)
+                                @if ($user->rol == 'Estudiante')
+                                    <td class="font-weight-bold text-secondary" style="text-align: center;">Estudiante</td>
+                                @else
+                                    <td  class="font-weight-bold text-primary" style="text-align: center;">{{ $user->rol }}</td>
+                                @endif
+                            @endif
+                        @endforeach
+                        <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
+                        <td style="text-align: center;">{{ $reserva->moduloReservado}}</td>
                         <td style="text-align: center;">
 
                             <!-- Boton Editar -->
-                            <a href="{{ route('encargado.details.route', $user->rut) }}">
+                            <a href="#">
                                 <button type="submit" class="btn btn-info">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z"/>
@@ -35,8 +45,8 @@
                             </a>
 
                             <!-- Boton Eliminar -->
-                            <a href="{{ route('encargado.delete.route', $user->rut) }}" class="delete"
-                            onclick="return confirm('¿Está seguro que desea ELIMINAR este Encargado?')">
+                            <a href="#" class="delete"
+                            onclick="return confirm('¿Está seguro que desea ELIMINAR esta Reserva?')">
                                 <button type="button" class="btn btn-danger">
                                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -46,7 +56,6 @@
                             </a>
                         </td>
                     </tr>
-                @endif
             @endforeach
             <tr>
                 <td></td>
@@ -57,7 +66,5 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ url('/') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a></br></br>
 
 @endsection

@@ -25,6 +25,7 @@ Route::get('/EditarEncargado/{user}', 'UserController@detailsEncargado')->name('
 Route::put('/EditarEncargado/{user}', 'UserController@updateEncargado')->name('encargado.update.route');
 
 
+
 //Rutas Usuarios
 Route::get('/Usuarios', 'UserController@showUsers');
 Route::get('/AgregarUsuario', 'UserController@createUser');
@@ -42,7 +43,9 @@ Route::get('/EditarAdmin/{user}', 'UserController@detailsAdmin')->name('admin.de
 Route::put('/EditarAdmin/{user}', 'UserController@updateAdmin')->name('admin.update.route');
 
 //Rutas Reservas
-Route::post('/ReservarModulos/{user}', 'ReservaController@reservarModulos')->name('reserva.create.route');
+Route::get('/Reservas', 'ReservaController@index');
+Route::get('/AgregarReserva', 'ReservaController@create');
+Route::post('/AgregarReserva', 'ReservaController@store');
 
 Auth::routes();
 

@@ -55,6 +55,20 @@
                     <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
                 </div>
 
+                <div class="form-group">
+                    <label for="rol">Rol</label>
+                    <select class="custom-select d-block w-100" id="rol" required>
+                        <option value="">Elegir...</option>
+                        <option>Profesor</option>
+                        <option>Estudiante</option>
+                        <option>Secretaria(o)</option>
+                        <option>Encargado de Laboratorio</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor seleccione un Rol valido.
+                    </div>
+                </div>
+
                 </br><button type="submit" class="btn btn-primary" style="width: 130px;">Guardar</button></br></br>
 
             </form>

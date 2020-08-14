@@ -13,9 +13,10 @@ class CreateUsersTable extends Migration{
             $table->integer('tipoUsuarioID')->index();
             $table->string('rut')->unique();
             $table->string('nombre');
+            $table->string('telefono');
+            $table->string('rol');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('telefono');
             $table->rememberToken();
 
             //Relaciones

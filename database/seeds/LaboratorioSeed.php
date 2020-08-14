@@ -26,5 +26,23 @@ class LaboratorioSeed extends Seeder{
             'capacidadMax' => '50',
             'tipoLab' => 'Quimica',
         ]);
+        
+        DB::table('reservas')->insert([
+            'rutUsuario' => '19000003',
+            'codigoLab' => 'A01',
+            'moduloReservado' => '1',
+        ]);
+
+        DB::table('reservas')->insert([
+            'rutUsuario' => '19000004',
+            'codigoLab' => 'A01',
+            'moduloReservado' => '2',
+        ]);
+
+        DB::table('reservas')->insert([
+            'rutUsuario' => '19000003',
+            'codigoLab' => 'A02',
+            'moduloReservado' => '3',
+        ]);
     }
 }
