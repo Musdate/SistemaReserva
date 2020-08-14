@@ -108,6 +108,8 @@
             </tr>
         </tbody>
     </table>
+
+    <a href="{{ url('/') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a></br></br>
     @endguest
 
 @endsection
