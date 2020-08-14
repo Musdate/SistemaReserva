@@ -9,15 +9,12 @@ class CreateReservasTable extends Migration{
     public function up(){
 
         Schema::create('reservas', function (Blueprint $table){
-            $table->string('codigoReserva')->unique();
+            $table->id();
             $table->string('rutUsuario')->index();
             $table->string('rutEncargado')->index();
             $table->string('codigoLab')->index();
             $table->string('modulosReservados', 20);
             $table->timestamps();
-
-            //Clave primaria
-            $table->primary('codigoReserva');
 
             //Relaciones
             $table->foreign('rutUsuario')->references('rut')->on('users');

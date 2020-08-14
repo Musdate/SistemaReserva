@@ -42,7 +42,7 @@ Route::get('/EditarAdmin/{user}', 'UserController@detailsAdmin')->name('admin.de
 Route::put('/EditarAdmin/{user}', 'UserController@updateAdmin')->name('admin.update.route');
 
 //Rutas Reservas
-//Route::post('/ReservarModulos/{user1}/{user2}/{lab}', 'ReservaController@reservarModulos');
+Route::post('/ReservarModulos/{user}', 'ReservaController@reservarModulos')->name('reserva.create.route');
 
 Auth::routes();
 

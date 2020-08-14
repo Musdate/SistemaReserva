@@ -4,6 +4,22 @@
 
 @section('content')
 
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{  $error  }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    @if(session('mensaje'))
+        <div class="alert alert-success">
+            <p>{{ session('mensaje') }}</p>
+        </div>
+    @endif
+
     <h1>Horario {{ $lab->nombreSala }}</h1></br>
 
     <table class="table">
@@ -23,7 +39,7 @@
             <tr>
                 <td>08:30 - 09:30</td>
 
-                <form method="POST" action="{{url('/ReservarModulos')}}">
+                <form method="POST" action="{{ route('reserva.create.route', Auth::user()->rut) }}">
                     @csrf
 
                     <div class="form-group">
@@ -32,7 +48,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check1" name="nombre" value="1 Lunes">
+                                        <input type="checkbox" class="custom-control-input" id="check1" name="modulosReservados" value="1 Lunes">
                                         <label class="custom-control-label" for="check1">Reservar</label>
                                     </div>
                                 </li>
@@ -41,7 +57,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check2" name="nombre" value="1 Martes">
+                                        <input type="checkbox" class="custom-control-input" id="check2" name="modulosReservados" value="1 Martes">
                                         <label class="custom-control-label" for="check2">Reservar</label>
                                     </div>
                                 </li>
@@ -50,7 +66,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check3" name="nombre" value="1 Miercoles">
+                                        <input type="checkbox" class="custom-control-input" id="check3" name="modulosReservados" value="1 Miercoles">
                                         <label class="custom-control-label" for="check3">Reservar</label>
                                     </div>
                                 </li>
@@ -59,7 +75,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check4" name="nombre" value="1 Jueves">
+                                        <input type="checkbox" class="custom-control-input" id="check4" name="modulosReservados" value="1 Jueves">
                                         <label class="custom-control-label" for="check4">Reservar</label>
                                     </div>
                                 </li>
@@ -68,7 +84,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check5" name="nombre" value="1 Viernes">
+                                        <input type="checkbox" class="custom-control-input" id="check5" name="modulosReservados" value="1 Viernes">
                                         <label class="custom-control-label" for="check5">Reservar</label>
                                     </div>
                                 </li>
@@ -77,7 +93,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check6" name="nombre" value="1 Sabado">
+                                        <input type="checkbox" class="custom-control-input" id="check6" name="modulosReservados" value="1 Sabado">
                                         <label class="custom-control-label" for="check6">Reservar</label>
                                     </div>
                                 </li>
@@ -86,7 +102,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check7" name="nombre" value="1 Domingo">
+                                        <input type="checkbox" class="custom-control-input" id="check7" name="modulosReservados" value="1 Domingo">
                                         <label class="custom-control-label" for="check7">Reservar</label>
                                     </div>
                                 </li>
@@ -99,7 +115,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check8" name="nombre" value="Lunes">
+                                        <input type="checkbox" class="custom-control-input" id="check8" name="modulosReservados" value="Lunes">
                                         <label class="custom-control-label" for="check8">Reservar</label>
                                     </div>
                                 </li>
@@ -108,7 +124,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check9" name="nombre" value="Martes">
+                                        <input type="checkbox" class="custom-control-input" id="check9" name="modulosReservados" value="Martes">
                                         <label class="custom-control-label" for="check9">Reservar</label>
                                     </div>
                                 </li>
@@ -117,7 +133,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check10" name="nombre" value="Miercoles">
+                                        <input type="checkbox" class="custom-control-input" id="check10" name="modulosReservados" value="Miercoles">
                                         <label class="custom-control-label" for="check10">Reservar</label>
                                     </div>
                                 </li>
@@ -126,7 +142,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check11" name="nombre" value="Jueves">
+                                        <input type="checkbox" class="custom-control-input" id="check11" name="modulosReservados" value="Jueves">
                                         <label class="custom-control-label" for="check11">Reservar</label>
                                     </div>
                                 </li>
@@ -135,7 +151,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check12" name="nombre" value="Viernes">
+                                        <input type="checkbox" class="custom-control-input" id="check12" name="modulosReservados" value="Viernes">
                                         <label class="custom-control-label" for="check12">Reservar</label>
                                     </div>
                                 </li>
@@ -144,7 +160,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check13" name="nombre" value="Sabado">
+                                        <input type="checkbox" class="custom-control-input" id="check13" name="modulosReservados" value="Sabado">
                                         <label class="custom-control-label" for="check13">Reservar</label>
                                     </div>
                                 </li>
@@ -153,7 +169,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check14" name="nombre" value="Domingo">
+                                        <input type="checkbox" class="custom-control-input" id="check14" name="modulosReservados" value="Domingo">
                                         <label class="custom-control-label" for="check14">Reservar</label>
                                     </div>
                                 </li>

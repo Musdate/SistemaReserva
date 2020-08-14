@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ReservaController extends Controller{
     
-    public function reservarModulos(){
+    public function reservarModulos($rut){
 
         $data = request()->validate([
             'rutUsuario' => 'required',
@@ -16,10 +16,12 @@ class ReservaController extends Controller{
         ]);
 
         Reserva::create([
-            'rutUsuario' => $data['rutUsuario'],
-            'rutEncargado' => $data['rutEncargado'],
-            'codigoLab' => $data['codigoLab'],
+            'rutUsuario' => $rut,
+            'rutEncargado' => '123000',
+            'codigoLab' => '123000',
             'modulosReservados' => $data['modulosReservados']
         ]);
+
+        return back()->with('mensaje', 'Reserva Exitosa');
     }
 }
