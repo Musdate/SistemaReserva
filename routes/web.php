@@ -24,8 +24,6 @@ Route::get('/EliminarEncargado{user}', 'UserController@deleteEncargado')->name('
 Route::get('/EditarEncargado/{user}', 'UserController@detailsEncargado')->name('encargado.details.route');
 Route::put('/EditarEncargado/{user}', 'UserController@updateEncargado')->name('encargado.update.route');
 
-
-
 //Rutas Usuarios
 Route::get('/Usuarios', 'UserController@showUsers');
 Route::get('/AgregarUsuario', 'UserController@createUser');
@@ -46,6 +44,16 @@ Route::put('/EditarAdmin/{user}', 'UserController@updateAdmin')->name('admin.upd
 Route::get('/Reservas', 'ReservaController@index');
 Route::get('/AgregarReserva', 'ReservaController@create');
 Route::post('/AgregarReserva', 'ReservaController@store');
+
+//Rutas Calendario
+Route::get('Calendar/event/{mes}','ControllerCalendar@index_month');
+Route::get('Calendar/event','ControllerCalendar@index');
+Route::get('Evento/form','ControllerEvent@form');
+Route::post('Evento/create','ControllerEvent@create');
+Route::get('Evento/details/{id}','ControllerEvent@details');
+Route::get('Evento/index','ControllerEvent@index');
+Route::get('Evento/index/{month}','ControllerEvent@index_month');
+Route::post('Evento/calendario','ControllerEvent@calendario');
 
 Auth::routes();
 

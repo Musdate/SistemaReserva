@@ -38,8 +38,8 @@
         <tbody>
         <tbody>
             <tr>
-                <td>08:30 - 09:30</td>
-                <td><form method="POST" action="{{ route('reserva.create.route', $lab->codigoLab) }}">
+                <td style="text-align: center;">08:30 - 09:30</td>
+                <td style="text-align: center;"><form method="POST" action="#">
                         <div class="form-group">
                             <label for="modulosReservados"> Modulo:</label>
                             <input type="text" class="form-control" name="modulosReservados">
@@ -47,102 +47,102 @@
                         <button type="submit" class="btn btn-primary">Reservar</button>
                     </form>
                 </td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>09:35 - 10:35</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>10:50 - 11:50</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>11:55 - 12:55</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>13:10 - 14:10</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>14:30 - 15:30</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>15:35 - 16:35</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>16:50 - 17:50</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>17:55 - 18:55</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
             <tr>
                 <td>19:10 - 20:10</td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
-                <td><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
+                <td style="text-align: center;"><a href=""><button type="submit" class="btn btn-primary">Reservar</button></a></td>
             </tr>
         </tbody>
     </table>

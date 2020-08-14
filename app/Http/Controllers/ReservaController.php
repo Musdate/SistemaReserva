@@ -25,13 +25,13 @@ class ReservaController extends Controller{
         $data = request()->validate([
             'rutUsuario' => 'required',
             'codigoLab' => 'required',
-            'modulosReservados' => 'required'
+            'moduloReservado' => 'required'
         ]);
 
         Reserva::create([
             'rutUsuario' => $data['rutUsuario'],
             'codigoLab' => $data['codigoLab'],
-            'modulosReservados' => $data['modulosReservados']
+            'moduloReservado' => $data['moduloReservado']
         ]);
 
         return back()->with('mensaje', 'Reserva Exitosa');

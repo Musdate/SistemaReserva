@@ -66,6 +66,6 @@ class CuentasSeed extends Seeder{
         ]);
 
         //Seed cuentas usuarios
-        factory(User::class, 10)->create();
+        factory(User::class, 30)->create();
     }
 }
