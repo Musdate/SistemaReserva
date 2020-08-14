@@ -50,6 +50,7 @@
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="check1" name="modulosReservados" value="1 Lunes">
                                         <label class="custom-control-label" for="check1">Reservar</label>
+                                        
                                     </div>
                                 </li>
                             </td>
