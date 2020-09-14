@@ -39,6 +39,13 @@
 
 @section('content')
 
+        @if ($message = Session::get('success'))
+        <div class="alert alert-danger alert-block">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>{{ $message }}</strong>
+        </div>
+       @endif
+
     <div class="flex-center position-ref full-height">
 
         <div class="content">
@@ -46,9 +53,18 @@
             <div class="title m-b-md">Pagina Principal</div>
 
             <div class="links">
-                <a href="{{ url('/Laboratorios') }}">Ver Laboratorios</a>
-                <a href="{{ url('/Reservas') }}">Ver Reservas</a>
-                <a href="{{ asset('/Evento/index') }}">Agregar Reservas</a>
+                @guest
+                    <a href="{{ asset('/Evento/index') }}">Calendario de Reservas</a>
+                @else
+
+                    <a href="{{ url('/Laboratorios') }}">Ver Laboratorios</a>
+                    @if (Auth::user()->tipoUsuarioID == '2')
+                        <a href="{{ url('/Reservas') }}">Ver mis Reservas</a>
+                    @else
+                        <a href="{{ url('/Reservas') }}">Ver Listado de Reservas</a>
+                    @endif
+                    <a href="{{ asset('/Evento/index') }}">Calendario de Reservas</a>
+                @endguest
             </div>
 
         </div>

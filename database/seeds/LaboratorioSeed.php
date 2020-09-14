@@ -31,21 +31,27 @@ class LaboratorioSeed extends Seeder{
             'rutUsuario' => '19000003',
             'codigoLab' => 'A01',
             'motivoReserva' => 'Reunion Clases Laboratorio',
-            'moduloReservado' => '2020-08-19',
+            'moduloReservado' => '2',
+            'fecha' => '2020-08-19',
+            'estado' => '0'
         ]);
 
         DB::table('reservas')->insert([
             'rutUsuario' => '19000004',
             'codigoLab' => 'A01',
             'motivoReserva' => 'Reunion Profesores',
-            'moduloReservado' => '2020-09-21',
+            'moduloReservado' => '6',
+            'fecha' => '2020-08-21',
+            'estado' => '0'
         ]);
 
         DB::table('reservas')->insert([
             'rutUsuario' => '19000003',
             'codigoLab' => 'A02',
             'motivoReserva' => 'Reunion Ayudantia',
-            'moduloReservado' => '2020-09-25',
+            'moduloReservado' => '3',
+            'fecha' => '2020-08-25',
+            'estado' => '1'
         ]);
     }
 }

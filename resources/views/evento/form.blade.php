@@ -47,14 +47,19 @@
                 </div>                
 
                 <div class="fomr-group">
-                  <label>Fecha:</label>
-                  <input type="date" class="form-control" name="moduloReservado">
+                  <label>Modulo reservado:</label>
+                  <input type="text" class="form-control" name="moduloReservado">
                 </div>
 
-                </br><button type="submit" class="btn btn-primary" style="width: 130px;">Guardar</button></br></br>
+                <div class="fomr-group">
+                  <label>Fecha:</label>
+                  <input type="date" class="form-control" name="fecha">
+                </div>
+
+                </br><button type="submit" class="btn btn-info" style="width: 130px;">Guardar</button></br></br>
 
             </form>
-
+            <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
         </div>
     </div>
 

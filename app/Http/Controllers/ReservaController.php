@@ -21,17 +21,62 @@ class ReservaController extends Controller{
             'rutUsuario' => 'required',
             'codigoLab' => 'required',
             'motivoReserva' => '',
-            'moduloReservado' => 'required'
+            'moduloReservado' => 'required',
+            'fecha' => 'required',
+            'estado' => ''
         ]);
 
         Reserva::create([
             'rutUsuario' => $data['rutUsuario'],
             'codigoLab' => $data['codigoLab'],
             'motivoReserva' => $data['motivoReserva'],
-            'moduloReservado' => $data['moduloReservado']
+            'moduloReservado' => $data['moduloReservado'],
+            'fecha' => $data['fecha'],
+            'estado' => '0'
         ]);
 
         return back()->with('mensaje', 'Reserva Exitosa');
+    }
+
+    public function delete($id){
+
+      $reserva = Reserva::find($id);
+      $reserva->delete();
+
+      $reservas = DB::table('reservas')->get();
+
+      return view('welcome', compact('reservas'));
+    }
+
+    public function update($id){
+
+      $event = Reserva::find($id);
+
+      $reservas = DB::table('reservas')->get();
+
+      foreach ($reservas as $reserva){
+
+        if ($event->id != $reserva->id){
+
+          if( ($event->fecha == $reserva->fecha) && ($event->moduloReservado == $reserva->moduloReservado) && ($event->codigoLab == $reserva->codigoLab) ){
+            return back()->with('success', 'El Laboratorio se encuentra Reservado');
+          }
+        }else{
+      
+          $data = request()->validate([
+            'rutUsuario' => 'required',
+            'codigoLab' => 'required',
+            'motivoReserva' => 'required',
+            'moduloReservado' => 'required',
+            'fecha' => 'required',
+            'estado' => ''            
+          ]);
+
+          $event->update($data);
+
+          return back()->with('success', 'Enviado exitosamente!');
+        }
+      }      
     }
 
     //--------------------------------------EVENTO--------------------------------------
@@ -46,14 +91,18 @@ class ReservaController extends Controller{
         'rutUsuario'      =>  'required',
         'codigoLab'       =>  'required',
         'motivoReserva'   => '',
-        'moduloReservado' =>  'required'
+        'moduloReservado' =>  'required',
+        'fecha'           => 'required',
+        'estado'          => ''
        ]);
   
         Reserva::insert([
           'rutUsuario'      => $request->input("rutUsuario"),
           'codigoLab'       => $request->input("codigoLab"),
           'motivoReserva'   => $request->input("motivoReserva"),
-          'moduloReservado' => $request->input("moduloReservado")
+          'moduloReservado' => $request->input("moduloReservado"),
+          'fecha'           => $request->input("fecha"),
+          'estado'          => '0'
         ]);
   
         return view('welcome')->with('success', 'Enviado exitosamente!');
@@ -149,7 +198,7 @@ class ReservaController extends Controller{
               $datanew['dia'] = date("d", strtotime($datafecha));
               $datanew['fecha'] = $datafecha;
               //AGREGAR CONSULTAS EVENTO
-              $datanew['evento'] = Reserva::where("moduloReservado",$datafecha)->get();
+              $datanew['evento'] = Reserva::where("fecha",$datafecha)->get();
   
               array_push($weekdata,$datanew);
             }

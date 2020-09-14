@@ -48,6 +48,8 @@ Route::get('Evento/details/{id}','ReservaController@details');
 Route::get('Evento/index','ReservaController@index');
 Route::get('Evento/index/{month}','ReservaController@index_month');
 Route::post('Evento/calendario','ReservaController@calendario');
+Route::put('/EditarReserva/{id}', 'ReservaController@update')->name('reserva.update.route');
+Route::get('/EliminarReserva/{id}', 'ReservaController@delete')->name('reserva.delete.route');
 
 //Rutas Calendario
 Route::get('Calendar/event/{mes}','ControllerCalendar@index_month');

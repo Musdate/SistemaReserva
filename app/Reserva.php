@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reserva extends Model{
 
-    protected $fillable = ['rutUsuario','codigoLab', 'motivoReserva', 'moduloReservado'];
+    protected $fillable = ['rutUsuario','codigoLab', 'motivoReserva', 'moduloReservado', 'fecha', 'estado'];
 }
