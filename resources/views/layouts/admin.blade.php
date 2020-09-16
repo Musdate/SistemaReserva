@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://lh3.googleusercontent.com/proxy/exhBV91c0xEbvD_2cd8Z3ggpjZB3j_dHJueuKdN8cwDwGEDSivXhTUcnffDZ58eH8PSiCbcbmo57uMW7lTV9K2dQ7Mu_ndamt1FsloO3iigZTeKtWKG1cQLewkkuxHOfmxXdcg_tov8OHl4oImE6GTrF">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -57,7 +58,7 @@
             </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto"> 
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
