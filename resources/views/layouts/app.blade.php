@@ -129,13 +129,25 @@
             @if ( Auth::user()->tipoUsuarioID == '1' )
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/AgregarUsuario') }}">Agregar Usuario</a>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Usuarios
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ url('/AgregarUsuario') }}">Agregar Usuario</a>
+                                <a class="dropdown-item" href="{{ url('/Usuarios') }}">Listado de Usuarios</a>
+                            </div>
+                          </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/Laboratorios') }}">Lista Laboratorios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/Usuarios') }}">Lista Usuarios</a>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Laboratorios
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ url('/Laboratorios') }}">Listado de Laboratorios</a>
+                            </div>
+                          </div>
                     </li>
                 </ul>
             @endif
