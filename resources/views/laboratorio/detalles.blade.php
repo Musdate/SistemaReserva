@@ -48,7 +48,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check1" name="modulosReservados[]" value="mod1">
+                                        <input type="checkbox" class="custom-control-input" id="check1" name="modulosReservados[]" value="Lunes">
                                         <label class="custom-control-label" for="check1">Reservar</label>
                                     </div>
                                 </li>
@@ -57,7 +57,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check2" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check2" name="modulosReservados[]" value="Martes">
                                         <label class="custom-control-label" for="check2">Reservar</label>
                                     </div>
                                 </li>
@@ -66,7 +66,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check3" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check3" name="modulosReservados[]" value="Miercoles">
                                         <label class="custom-control-label" for="check3">Reservar</label>
                                     </div>
                                 </li>
@@ -75,7 +75,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check4" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check4" name="modulosReservados[]" value="Jueves">
                                         <label class="custom-control-label" for="check4">Reservar</label>
                                     </div>
                                 </li>
@@ -84,7 +84,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check5" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check5" name="modulosReservados[]" value="Viernes">
                                         <label class="custom-control-label" for="check5">Reservar</label>
                                     </div>
                                 </li>
@@ -93,7 +93,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check6" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check6" name="modulosReservados[]" value="Sabado">
                                         <label class="custom-control-label" for="check6">Reservar</label>
                                     </div>
                                 </li>
@@ -102,7 +102,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check7" name="modulosReservados[]" value="1">
+                                        <input type="checkbox" class="custom-control-input" id="check7" name="modulosReservados[]" value="Domingo">
                                         <label class="custom-control-label" for="check7">Reservar</label>
                                     </div>
                                 </li>
@@ -115,7 +115,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check8" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check8" name="modulosReservados[]" value="Lunes">
                                         <label class="custom-control-label" for="check8">Reservar</label>
                                     </div>
                                 </li>
@@ -124,7 +124,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check9" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check9" name="modulosReservados[]" value="Martes">
                                         <label class="custom-control-label" for="check9">Reservar</label>
                                     </div>
                                 </li>
@@ -133,7 +133,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check10" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check10" name="modulosReservados[]" value="Miercoles">
                                         <label class="custom-control-label" for="check10">Reservar</label>
                                     </div>
                                 </li>
@@ -142,7 +142,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check11" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check11" name="modulosReservados[]" value="Jueves">
                                         <label class="custom-control-label" for="check11">Reservar</label>
                                     </div>
                                 </li>
@@ -151,7 +151,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check12" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check12" name="modulosReservados[]" value="Viernes">
                                         <label class="custom-control-label" for="check12">Reservar</label>
                                     </div>
                                 </li>
@@ -160,7 +160,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check13" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check13" name="modulosReservados[]" value="Sabado">
                                         <label class="custom-control-label" for="check13">Reservar</label>
                                     </div>
                                 </li>
@@ -169,7 +169,7 @@
                             <td>
                                 <li class="list-group-item">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check14" name="modulosReservados[]" value="2">
+                                        <input type="checkbox" class="custom-control-input" id="check14" name="modulosReservados[]" value="Domingo">
                                         <label class="custom-control-label" for="check14">Reservar</label>
                                     </div>
                                 </li>
@@ -373,340 +373,10 @@
                                     </div>
                                 </li>
                             </td>
-            </tr>
-
-            <tr>
-                            <td>14:30 - 15:30</td>
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check36" name="nombre" value="Lunes">
-                                        <label class="custom-control-label" for="check36">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check37" name="nombre" value="Martes">
-                                        <label class="custom-control-label" for="check37">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check38" name="nombre" value="Miercoles">
-                                        <label class="custom-control-label" for="check38">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check39" name="nombre" value="Jueves">
-                                        <label class="custom-control-label" for="check39">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check40" name="nombre" value="Viernes">
-                                        <label class="custom-control-label" for="check40">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check41" name="nombre" value="Sabado">
-                                        <label class="custom-control-label" for="check41">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check42" name="nombre" value="Domingo">
-                                        <label class="custom-control-label" for="check42">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-            </tr>
-
-            <tr>
-                            <td>15:35 - 16:35</td>
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check43" name="nombre" value="Lunes">
-                                        <label class="custom-control-label" for="check43">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check44" name="nombre" value="Martes">
-                                        <label class="custom-control-label" for="check44">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check45" name="nombre" value="Miercoles">
-                                        <label class="custom-control-label" for="check45">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check46" name="nombre" value="Jueves">
-                                        <label class="custom-control-label" for="check46">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check47" name="nombre" value="Viernes">
-                                        <label class="custom-control-label" for="check47">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check48" name="nombre" value="Sabado">
-                                        <label class="custom-control-label" for="check48">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check49" name="nombre" value="Domingo">
-                                        <label class="custom-control-label" for="check49">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-            </tr>
-
-            <tr>
-                            <td>16:50 - 17:50</td>
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check50" name="nombre" value="Lunes">
-                                        <label class="custom-control-label" for="check50">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check51" name="nombre" value="Martes">
-                                        <label class="custom-control-label" for="check51">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check52" name="nombre" value="Miercoles">
-                                        <label class="custom-control-label" for="check52">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check53" name="nombre" value="Jueves">
-                                        <label class="custom-control-label" for="check53">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check54" name="nombre" value="Viernes">
-                                        <label class="custom-control-label" for="check54">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check55" name="nombre" value="Sabado">
-                                        <label class="custom-control-label" for="check55">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check56" name="nombre" value="Domingo">
-                                        <label class="custom-control-label" for="check56">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-            </tr>
-
-            <tr>
-                            <td>17:55 - 18:55</td>
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check57" name="nombre" value="Lunes">
-                                        <label class="custom-control-label" for="check57">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check58" name="nombre" value="Martes">
-                                        <label class="custom-control-label" for="check58">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check59" name="nombre" value="Miercoles">
-                                        <label class="custom-control-label" for="check59">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check60" name="nombre" value="Jueves">
-                                        <label class="custom-control-label" for="check60">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check61" name="nombre" value="Viernes">
-                                        <label class="custom-control-label" for="check61">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check62" name="nombre" value="Sabado">
-                                        <label class="custom-control-label" for="check62">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check63" name="nombre" value="Domingo">
-                                        <label class="custom-control-label" for="check63">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-            </tr>
-
-            <tr>
-                            <td>19:10 - 20:10</td>
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check64" name="nombre" value="Lunes">
-                                        <label class="custom-control-label" for="check64">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check65" name="nombre" value="Martes">
-                                        <label class="custom-control-label" for="check65">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check66" name="nombre" value="Miercoles">
-                                        <label class="custom-control-label" for="check66">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check67" name="nombre" value="Jueves">
-                                        <label class="custom-control-label" for="check67">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check68" name="nombre" value="Viernes">
-                                        <label class="custom-control-label" for="check68">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check69" name="nombre" value="Sabado">
-                                        <label class="custom-control-label" for="check69">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
-
-                            <td>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="check70" name="nombre" value="Domingo">
-                                        <label class="custom-control-label" for="check70">Reservar</label>
-                                    </div>
-                                </li>
-                            </td>
                         </ul>
                     </div>
                 </form>
-            </tr>
+            </tr>    
         </tbody>
     </table>
     <div class="div"></br><button type="submit" class="btn btn-primary" style="width: 150px;" style="text-align: center;">Guardar</button></br></br></div>

@@ -100,12 +100,12 @@ class ReservaController extends Controller{
           'rutUsuario'      => $request->input("rutUsuario"),
           'codigoLab'       => $request->input("codigoLab"),
           'motivoReserva'   => $request->input("motivoReserva"),
-          'moduloReservado' => $request->input("moduloReservado"),
+          'moduloReservado' => implode(",", $request->input("moduloReservado")),
           'fecha'           => $request->input("fecha"),
           'estado'          => '0'
         ]);
   
-        return view('welcome')->with('success', 'Enviado exitosamente!');
+        return view('welcome');
   
       }
 
