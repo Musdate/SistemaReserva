@@ -57,12 +57,11 @@
 
                 <div class="form-group">
                     <label for="rol">Rol</label>
-                    <select class="custom-select d-block w-100" id="rol" required>
+                    <select class="custom-select d-block w-100" id="rol" name="rol" required>
                         <option value="">Elegir...</option>
-                        <option>Profesor</option>
-                        <option>Estudiante</option>
-                        <option>Secretaria(o)</option>
-                        <option>Encargado de Laboratorio</option>
+                        <option value="Profesor">Profesor</option>
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Secretaria">Secretaria(o)</option>
                     </select>
                     <div class="invalid-feedback">
                         Por favor seleccione un Rol valido.

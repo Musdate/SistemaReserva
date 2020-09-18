@@ -32,8 +32,9 @@ class LaboratorioSeed extends Seeder{
             'codigoLab' => 'A01',
             'motivoReserva' => 'Reunion Clases Laboratorio',
             'moduloReservado' => '2',
-            'fecha' => '2020-08-19',
-            'estado' => '0'
+            'fechaInicio' => '2020-08-19',
+            'fechaFin' => '2020-09-19',
+            'dia' => 'Lunes'
         ]);
 
         DB::table('reservas')->insert([
@@ -41,8 +42,9 @@ class LaboratorioSeed extends Seeder{
             'codigoLab' => 'A01',
             'motivoReserva' => 'Reunion Profesores',
             'moduloReservado' => '6',
-            'fecha' => '2020-08-21',
-            'estado' => '0'
+            'fechaInicio' => '2020-08-21',
+            'fechaFin' => '2020-09-21',
+            'dia' => 'Martes'
         ]);
 
         DB::table('reservas')->insert([
@@ -50,8 +52,9 @@ class LaboratorioSeed extends Seeder{
             'codigoLab' => 'A02',
             'motivoReserva' => 'Reunion Ayudantia',
             'moduloReservado' => '3',
-            'fecha' => '2020-08-25',
-            'estado' => '1'
+            'fechaInicio' => '2020-08-25',
+            'fechaFin' => '2020-09-26',
+            'dia' => 'Miercoles'
         ]);
     }
 }

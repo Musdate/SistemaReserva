@@ -40,6 +40,11 @@
                     <label for="nombre"> Nombre: </label>
                     <input type="text" class="form-control" name="nombre" value="{{old('nombre', $user->nombre)}}">
                 </div>
+
+                <div class="form-group">
+                    <label for="nombre"> Rol: </label>
+                    <input type="text" readonly class="form-control" name="rol" value="{{old('rol', $user->rol)}}">
+                </div>
  
                 <div class="form-group">
                     <label for="telefono"> Numero Telefono: </label>

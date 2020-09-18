@@ -75,7 +75,7 @@
 
             <!-- Si es Admin -->
             @if ( Auth::user()->tipoUsuarioID == '0' )
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -87,7 +87,6 @@
                             </div>
                           </div>
                     </li>
-
 
                     <li class="nav-item">
                         <div class="dropdown">

@@ -26,20 +26,22 @@ class UserController extends Controller{
 
         $data = request()->validate([
             'tipoUsuarioID' => '',
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'           => 'required',
+            'nombre'        => 'required',
+            'rol'           => 'required',
+            'email'         => 'required|email',
+            'password'      => 'required',
+            'telefono'      => 'required'            
         ]);
 
         User::create([
             'tipoUsuarioID' => '2',
-            'rut' => $data['rut'],
-            'nombre' => $data['nombre'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'telefono' => $data['telefono']   
+            'rut'           => $data['rut'],
+            'nombre'        => $data['nombre'],
+            'rol'           => $data['rol'],
+            'email'         => $data['email'],
+            'password'      => Hash::make($data['password']),
+            'telefono'      => $data['telefono']   
         ]);
 
         return back()->with('mensaje', 'Se ha añadido un nuevo Usuario');
@@ -69,11 +71,12 @@ class UserController extends Controller{
         $mensaje = 'Se ha actualizado correctamente';
         
         $data = request()->validate([
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'       => 'required',
+            'nombre'    => 'required',
+            'rol'       => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required',
+            'telefono'  => 'required'            
         ]);
 
         $user->update($data);
@@ -98,20 +101,22 @@ class UserController extends Controller{
 
         $data = request()->validate([
             'tipoUsuarioID' => '',
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'           => 'required',
+            'nombre'        => 'required',
+            'rol'           => 'required',
+            'email'         => 'required|email',
+            'password'      => 'required',
+            'telefono'      => 'required'            
         ]);
 
         User::create([
             'tipoUsuarioID' => '1',
-            'rut' => $data['rut'],
-            'nombre' => $data['nombre'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'telefono' => $data['telefono']   
+            'rut'           => $data['rut'],
+            'nombre'        => $data['nombre'],
+            'rol'           => $data['rol'],
+            'email'         => $data['email'],
+            'password'      => Hash::make($data['password']),
+            'telefono'      => $data['telefono']   
         ]);
 
         return back()->with('mensaje', 'Se ha añadido un nuevo Encargado');
@@ -141,11 +146,12 @@ class UserController extends Controller{
         $mensaje = 'Se ha actualizado correctamente';
         
         $data = request()->validate([
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'       => 'required',
+            'nombre'    => 'required',
+            'rol'       => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required',
+            'telefono'  => 'required'            
         ]);
 
         $user->update($data);
@@ -170,20 +176,22 @@ class UserController extends Controller{
 
         $data = request()->validate([
             'tipoUsuarioID' => '',
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'           => 'required',
+            'nombre'        => 'required',
+            'rol'           => 'required',
+            'email'         => 'required|email',
+            'password'      => 'required',
+            'telefono'      => 'required'            
         ]);
 
         User::create([
             'tipoUsuarioID' => '0',
-            'rut' => $data['rut'],
-            'nombre' => $data['nombre'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'telefono' => $data['telefono']   
+            'rut'           => $data['rut'],
+            'nombre'        => $data['nombre'],
+            'rol'           => $data['rol'],
+            'email'         => $data['email'],
+            'password'      => Hash::make($data['password']),
+            'telefono'      => $data['telefono']   
         ]);
 
         return back()->with('mensaje', 'Se ha añadido un nuevo Admin');
@@ -213,11 +221,12 @@ class UserController extends Controller{
         $mensaje = 'Se ha actualizado correctamente';
         
         $data = request()->validate([
-            'rut' => 'required',
-            'nombre' => 'required',
-            'email' => 'required|email',
-            'password' => 'required',
-            'telefono' => 'required'            
+            'rut'       => 'required',
+            'nombre'    => 'required',
+            'rol'       => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required',
+            'telefono'  => 'required'            
         ]);
 
         $user->update($data);

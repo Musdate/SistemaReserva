@@ -5,11 +5,11 @@
 @section('content')
 
       @if ($message = Session::get('success'))
-        <div class="alert alert-danger alert-block">
+        <div class="alert alert-success alert-block">
             <button type="button" class="close" data-dismiss="alert">×</button>
             <strong>{{ $message }}</strong>
         </div>
-       @endif
+      @endif
 
 <div class="card border-info">
 
@@ -35,19 +35,24 @@
           <input type="text" class="form-control" name="motivoReserva" value="{{old('motivoReserva', $event->motivoReserva)}}">
         </div></br>
 
+        <div class="form-row">
+          <div class="col-4">
+              <label>Fecha Inicio:</label>
+              <input type="date" class="form-control" name="fechaInicio" value="{{old('fecha', $event->fechaInicio)}}">
+          </div>
+          <div class="col-4">
+              <label>Fecha Fin:</label>
+              <input type="date" class="form-control" name="fechaFin" value="{{old('fecha', $event->fechaFin)}}">
+          </div>
+          <div class="col-4">
+              <label>Dia:</label>
+              <input type="text" class="form-control" name="dia" value="{{old('dia', $event->dia)}}">
+          </div>
+        </div></br>
+        
         <div class="fomr-group">
           <label for="moduloReservado">Modulo Reservado:</label>
           <input type="text" class="form-control" name="moduloReservado" value="{{old('moduloReservado', $event->moduloReservado)}}">
-        </div></br>
-
-        <div class="fomr-group">
-          <label for="fecha">Fecha:</label>
-          <input type="text" class="form-control" name="fecha" value="{{old('fecha', $event->fecha)}}">
-        </div></br></br>
-
-        <div class="fomr-group">
-          <label for="estadp">Estado de la Reserva:</br> (1 para Aceptar)</label>
-          <input type="text" class="form-control" name="estado" value="{{old('estado', $event->estado)}}" placeholder="1 para Aceptar">
         </div></br>
 
         <button type="submit" class="btn btn-info" style="width: 130px;">Guardar</button></a>
