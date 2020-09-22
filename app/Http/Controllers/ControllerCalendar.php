@@ -15,7 +15,7 @@ class ControllerCalendar extends Controller{
         $mespanish = $this->spanish_month($mes);
         $mes = $data['month'];
   
-        return view("index",[
+        return view("calendario",[
           'data' => $data,
           'mes' => $mes,
           'mespanish' => $mespanish
@@ -31,7 +31,7 @@ class ControllerCalendar extends Controller{
         $mespanish = $this->spanish_month($mes);
         $mes = $data['month'];
   
-        return view("index",[
+        return view("calendario",[
           'data' => $data,
           'mes' => $mes,
           'mespanish' => $mespanish

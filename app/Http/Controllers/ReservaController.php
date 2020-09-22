@@ -11,6 +11,7 @@ class ReservaController extends Controller{
   // ==================== RESERVAS ====================
 
   public function index1(){
+
       $reservas = DB::table('reservas')->get();
       $users = DB::table('users')->get();
 
@@ -18,7 +19,10 @@ class ReservaController extends Controller{
   }
 
   public function form(){
-      return view("evento.form");
+    
+    $labs = DB::table('laboratorios')->get();
+
+    return view("evento.form", compact('labs'));
   }
   
   public function create(Request $request){
@@ -80,11 +84,9 @@ class ReservaController extends Controller{
   public function details($id){
 
     $event = Reserva::find($id);
+    $labs = DB::table('laboratorios')->get();
 
-    return view("evento/evento",[
-      "event" => $event
-    ]);
-
+    return view("evento.evento", compact('event','labs'));
   }
 
   // ==================== CALENDARIO ====================
@@ -92,7 +94,6 @@ class ReservaController extends Controller{
   public function index(){
 
     $month = date("Y-m");
-    //
     $data = $this->calendar_month($month);
     $mes = $data['month'];
     // obtener mes en espanol
@@ -157,7 +158,6 @@ class ReservaController extends Controller{
     while ($iweek < $semana):
         $iweek++;
         //echo "Semana $iweek <br>";
-        //
         $weekdata = [];
         for ($iday=0; $iday < 7 ; $iday++){
           // code...
@@ -166,7 +166,7 @@ class ReservaController extends Controller{
           $datanew['dia'] = date("d", strtotime($datafecha));
           $datanew['fecha'] = $datafecha;
           //AGREGAR CONSULTAS EVENTO
-          $datanew['evento'] = Reserva::where("fecha",$datafecha)->get();
+          $datanew['evento'] = Reserva::where("fechaInicio",$datafecha)->get();
 
           array_push($weekdata,$datanew);
         }
@@ -234,5 +234,4 @@ class ReservaController extends Controller{
     }
     return $mes;
   }
-
 }

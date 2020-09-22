@@ -4,7 +4,7 @@
 
 @section('content') 
 
-    <br/></br>
+    <br/>
 
     @if($errors->any())
         <div class="alert alert-danger">

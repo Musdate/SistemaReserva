@@ -15,6 +15,7 @@ Route::get('/EliminarLaboratorio/{lab}', 'LabController@delete')->name('laborato
 Route::get('/EditarLaboratorio/{lab}', 'LabController@details')->name('laboratorio.details.route');
 Route::put('/EditarLaboratorio/{lab}', 'LabController@update')->name('laboratorio.update.route');
 Route::get('/DetallesLaboratorio/{lab}', 'LabController@show')->name('laboratorio.show.route');
+Route::get('/DetallesLaboratorio/{lab}/{mes}', 'LabController@show_month');
 
 //Rutas Encargados
 Route::get('/Encargados', 'UserController@showEncargados');
