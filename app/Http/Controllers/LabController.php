@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Laboratorio;
 use App\Reserva;
+use App\Laboratorio;
+use App\ModuloReservado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -123,6 +124,9 @@ public static function calendar_month($month, $codigoLab){
     // sacar el lunes de la primera semana
     $nuevaFecha = mktime(0,0,0,$montmonth,$daysmonth,$yearmonth);
     $diaDeLaSemana = date("w", $nuevaFecha);
+    if($diaDeLaSemana == 0){
+        $diaDeLaSemana = 7;
+    }
     $nuevaFecha = $nuevaFecha - ($diaDeLaSemana*24*3600); //Restar los segundos totales de los dias transcurridos de la semana
     $dateini = date ("Y-m-d",$nuevaFecha);
     //$dateini = date("Y-m-d",strtotime($dateini."+ 1 day"));
@@ -138,6 +142,11 @@ public static function calendar_month($month, $codigoLab){
     else {
         $semana = ($semana2-$semana1)+1;
     }
+    if($montmonth == 1){
+        if($semana1 > 1){
+            $semana = $semana2 + 1;
+        }
+    }
     // semana todal del mes
     $datafecha = $dateini;
     $calendario = array();
@@ -152,8 +161,8 @@ public static function calendar_month($month, $codigoLab){
             $datanew['dia'] = date("d", strtotime($datafecha));
             $datanew['fecha'] = $datafecha;
             //AGREGAR CONSULTAS EVENTO
-            $datanew['evento'] = Reserva::where([
-                ["fechaInicio",$datafecha],
+            $datanew['evento'] = ModuloReservado::where([
+                ["fecha",$datafecha],
                 ["codigoLab",$codigoLab],
             ])->get();
 
@@ -212,8 +221,8 @@ public static function spanish_month($month){
     elseif ($month=="Oct") {
         $mes = "Octubre";
     }
-    elseif ($month=="Oct") {
-        $mes = "December";
+    elseif ($month=="Nov") {
+        $mes = "Noviembre";
     }
     elseif ($month=="Dec") {
         $mes = "Diciembre";

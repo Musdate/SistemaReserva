@@ -52,11 +52,6 @@ Route::post('Evento/calendario','ReservaController@calendario');
 Route::put('/EditarReserva/{id}', 'ReservaController@update')->name('reserva.update.route');
 Route::get('/EliminarReserva/{id}', 'ReservaController@delete')->name('reserva.delete.route');
 
-//Rutas Calendario
-Route::get('Calendar/event/{mes}','ControllerCalendar@index_month');
-Route::get('Calendar/event','ControllerCalendar@index');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

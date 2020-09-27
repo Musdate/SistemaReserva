@@ -41,12 +41,16 @@
         @foreach  ($weekdata['datos'] as $dayweek)
           @if  ($dayweek['mes']==$mes)
             <div class="col box-day">
-              {{ $dayweek['dia']  }}
-              <!-- evento -->
+              {{ $dayweek['dia']  }}</br>
+              <!-- imprime eventos -->
+              @php($idAux = -1)
               @foreach  ($dayweek['evento'] as $event)
-              <a class="badge badge-primary" href="{{ asset('/Evento/details/') }}/{{ $event->id }}">
-                {{ $event->codigoLab }}
-              </a>
+                @if ($idAux != $event->idReserva)
+                  <a class="badge badge-primary" href="{{ asset('/Evento/details/') }}/{{ $event->idReserva }}">
+                    {{ $event->codigoLab }}
+                  </a>
+                  @php($idAux = $event->idReserva)
+                @endif
               @endforeach
             </div>
           @else

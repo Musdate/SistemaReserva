@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Reserva;
+use Carbon\Carbon;
+use App\ModuloReservado;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -33,22 +35,266 @@ class ReservaController extends Controller{
     'motivoReserva'   =>  '',
     'moduloReservado' =>  'required',
     'fechaInicio'     =>  'required',
-    'fechaFin'        =>  'required',
-    'dia'             =>  'required'
+    'fechaFin'        =>  'required'
     ]);
 
-    Reserva::insert([
-      'rutUsuario'      => $request->input("rutUsuario"),
-      'codigoLab'       => $request->input("codigoLab"),
-      'motivoReserva'   => $request->input("motivoReserva"),
-      'moduloReservado' => implode(",", $request->input("moduloReservado")),
-      'fechaInicio'     => $request->input("fechaInicio"),
-      'fechaFin'        => $request->input("fechaFin"),
-      'dia'             => $request->input("dia"),
-    ]);
+    $rutUsuario       = $request->input("rutUsuario");
+    $codigoLab        = $request->input("codigoLab");
+    $motivoReserva    = $request->input("motivoReserva");
+    $moduloReservado  = implode(",", $request->input("moduloReservado"));
+    $fechaInicio      = $request->input("fechaInicio");
+    $fechaFin         = $request->input("fechaFin");
+    $arrayModulos     = $request->input("moduloReservado");
 
-    return view('welcome');
+    $verificador = $this->verificarReserva($codigoLab, $arrayModulos, $fechaInicio, $fechaFin);
 
+    if ($verificador == "SI"){
+
+      Reserva::insert([
+        'rutUsuario'      => $rutUsuario,
+        'codigoLab'       => $codigoLab,
+        'motivoReserva'   => $motivoReserva,
+        'moduloReservado' => $moduloReservado,
+        'fechaInicio'     => $fechaInicio,
+        'fechaFin'        => $fechaFin,
+      ]);
+      
+      $reservaID =  Reserva::where([
+                      ["rutUsuario",$rutUsuario],
+                      ["codigoLab",$codigoLab],
+                      ["motivoReserva",$motivoReserva],
+                      ["moduloReservado",$moduloReservado],
+                      ["fechaInicio",$fechaInicio],
+                      ["fechaFin",$fechaFin],
+                    ])->first();
+  
+      for ($i = 0; $i < count($arrayModulos); $i++){
+  
+        //AGREGAR MODULOS DIA LUNES
+        if ($arrayModulos[$i] > 0 && $arrayModulos[$i] < 11){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA MARTES
+        if ($arrayModulos[$i] > 10 && $arrayModulos[$i] < 21){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDay();
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA MIERCOLES
+        if ($arrayModulos[$i] > 20 && $arrayModulos[$i] < 31){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDays(2);
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA JUEVES
+        if ($arrayModulos[$i] > 30 && $arrayModulos[$i] < 41){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDays(3);
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA VIERNES
+        if ($arrayModulos[$i] > 40 && $arrayModulos[$i] < 51){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDays(4);
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA SABADO
+        if ($arrayModulos[$i] > 50 && $arrayModulos[$i] < 61){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDays(5);
+          
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+  
+        //AGREGAR MODULOS DIA DOMINGO
+        if ($arrayModulos[$i] > 60 && $arrayModulos[$i] < 71){
+  
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $impr = $date1->diffInWeeks($date2);
+  
+          $date1 = $date1->addDays(6);
+  
+          ModuloReservado::insert([
+          'idReserva'       => $reservaID->id,
+          'codigoLab'       => $codigoLab,
+          'moduloReservado' => $arrayModulos[$i],
+          'fecha'           => $date1,
+          ]);
+  
+          for($l = 0; $l < $impr; $l++){
+            ModuloReservado::insert([
+              'idReserva'       => $reservaID->id,
+              'codigoLab'       => $codigoLab,
+              'moduloReservado' => $arrayModulos[$i],
+              'fecha'           => $date1->addWeek(),
+            ]);
+          }
+        }
+      }
+      return back()->with('success', 'Reserva Exitosa!');
+    }
+    return back()->with('failure', 'Uno o más Modulos ya estan Reservados.');
+  }
+
+  public function verificarReserva($codigoLab, $arrayModulos, $fechaInicio, $fechaFin){
+    
+    $respuesta = "SI";
+
+    for ($i = 0; $i < count($arrayModulos); $i++){
+
+      for ($j = 0; $j < 61; $j = $j + 10){
+
+        if ($arrayModulos[$i] > $j && $arrayModulos[$i] < $j + 11){
+
+          $date1 = Carbon::create($fechaInicio);
+          $date2 = Carbon::create($fechaFin);
+          $semanas = $date1->diffInWeeks($date2);
+
+          $check = ModuloReservado::where([
+                  ["fecha",$date1],
+                  ["codigoLab",$codigoLab],
+                  ["moduloReservado",$arrayModulos[$i]]
+                  ])->first();
+
+          if ($check){
+            $respuesta = "NO";
+            return $respuesta;
+          }
+
+          for($l = 0; $l < $semanas; $l++){
+            $check = ModuloReservado::where([
+              ["fecha",$date1->addWeek()],
+              ["codigoLab",$codigoLab],
+              ["moduloReservado",$arrayModulos[$i]]
+              ])->first();
+            if ($check){
+              $respuesta = "NO";
+              return $respuesta;
+            }
+          }
+        }
+      }
+    }
+    return $respuesta;
   }
 
   public function update($id){
@@ -61,8 +307,7 @@ class ReservaController extends Controller{
       'motivoReserva'   => 'required',
       'moduloReservado' => 'required',
       'fechaInicio'     => 'required',
-      'fechaFin'        => 'required',
-      'dia'             => 'required'            
+      'fechaFin'        => 'required'           
     ]);
 
     $event->update($data);
@@ -136,6 +381,9 @@ class ReservaController extends Controller{
     // sacar el lunes de la primera semana
     $nuevaFecha = mktime(0,0,0,$montmonth,$daysmonth,$yearmonth);
     $diaDeLaSemana = date("w", $nuevaFecha);
+    if($diaDeLaSemana == 0){
+      $diaDeLaSemana = 7;
+  }
     $nuevaFecha = $nuevaFecha - ($diaDeLaSemana*24*3600); //Restar los segundos totales de los dias transcurridos de la semana
     $dateini = date ("Y-m-d",$nuevaFecha);
     //$dateini = date("Y-m-d",strtotime($dateini."+ 1 day"));
@@ -151,6 +399,11 @@ class ReservaController extends Controller{
     else {
       $semana = ($semana2-$semana1)+1;
     }
+    if($montmonth == 1){
+      if($semana1 > 1){
+          $semana = $semana2 + 1;
+      }
+  }
     // semana todal del mes
     $datafecha = $dateini;
     $calendario = array();
@@ -160,13 +413,12 @@ class ReservaController extends Controller{
         //echo "Semana $iweek <br>";
         $weekdata = [];
         for ($iday=0; $iday < 7 ; $iday++){
-          // code...
           $datafecha = date("Y-m-d",strtotime($datafecha."+ 1 day"));
           $datanew['mes'] = date("M", strtotime($datafecha));
           $datanew['dia'] = date("d", strtotime($datafecha));
           $datanew['fecha'] = $datafecha;
           //AGREGAR CONSULTAS EVENTO
-          $datanew['evento'] = Reserva::where("fechaInicio",$datafecha)->get();
+          $datanew['evento'] = ModuloReservado::where("fecha",$datafecha)->get();
 
           array_push($weekdata,$datanew);
         }
@@ -223,8 +475,8 @@ class ReservaController extends Controller{
     elseif ($month=="Oct") {
       $mes = "Octubre";
     }
-    elseif ($month=="Oct") {
-      $mes = "December";
+    elseif ($month=="Nov") {
+      $mes = "Noviembre";
     }
     elseif ($month=="Dec") {
       $mes = "Diciembre";

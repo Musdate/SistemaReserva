@@ -45,17 +45,13 @@
         </div></br>
 
         <div class="form-row">
-          <div class="col-4">
+          <div class="col">
               <label>Fecha Inicio:</label>
               <input type="date" class="form-control" name="fechaInicio" value="{{old('fecha', $event->fechaInicio)}}">
           </div>
-          <div class="col-4">
+          <div class="col">
               <label>Fecha Fin:</label>
               <input type="date" class="form-control" name="fechaFin" value="{{old('fecha', $event->fechaFin)}}">
-          </div>
-          <div class="col-4">
-              <label>Dia:</label>
-              <input type="text" class="form-control" name="dia" value="{{old('dia', $event->dia)}}">
           </div>
         </div></br>
       

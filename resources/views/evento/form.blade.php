@@ -6,21 +6,17 @@
 
     </br>
 
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     @if ($message = Session::get('success'))
-        <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-            <strong>{{ $message }}</strong>
-        </div>
+      <div class="alert alert-success alert-block">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>{{ $message }}</strong>
+      </div>
+    @endif
+    @if ($message = Session::get('failure'))
+      <div class="alert alert-danger alert-block">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>{{ $message }}</strong>
+      </div>
     @endif
 
     <div class="card border-primary">
@@ -52,27 +48,13 @@
                 </div></br>
 
                 <div class="form-row">
-                    <div class="col-4">
+                    <div class="col">
                         <label>Fecha Inicio:</label>
                         <input type="date" class="form-control" name="fechaInicio">
                     </div>
-                    <div class="col-4">
+                    <div class="col">
                         <label>Fecha Fin:</label>
                         <input type="date" class="form-control" name="fechaFin">
-                    </div>
-
-                    <div class="col-4">
-                        <label for="dia">Dia:</label>
-                        <select class="custom-select d-block w-100" id="dia" name="dia" required>
-                            <option value="">Elegir...</option>
-                            <option value="Lunes">Lunes</option>
-                            <option value="Martes">Martes</option>
-                            <option value="Miercoles">Miercoles</option>
-                            <option value="Jueves">Jueves</option>
-                            <option value="Viernes">Viernes</option>
-                            <option value="Sabado">Sabado</option>
-                            <option value="Domingo">Domingo</option>                        
-                        </select>
                     </div>
                 </div></br></br>
 
@@ -94,102 +76,122 @@
                 <tbody  style="text-align: center;">
                     <tr>
                         <td>08:30 - 09:30</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check1" name="moduloReservado[]" value="1">
-                                <label class="custom-control-label" for="check1"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}1"i name="moduloReservado[]" value="{{$i}}1">
+                                    <label class="custom-control-label" for="check{{$i}}1"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>09:35 - 10:35</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check2" name="moduloReservado[]" value="2">
-                                <label class="custom-control-label" for="check2"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}2"i name="moduloReservado[]" value="{{$i}}2">
+                                    <label class="custom-control-label" for="check{{$i}}2"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>10:50 - 11:50</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check3" name="moduloReservado[]" value="3">
-                                <label class="custom-control-label" for="check3"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}3"i name="moduloReservado[]" value="{{$i}}3">
+                                    <label class="custom-control-label" for="check{{$i}}3"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>11:55 - 12:55</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check4" name="moduloReservado[]" value="4">
-                                <label class="custom-control-label" for="check4"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}4"i name="moduloReservado[]" value="{{$i}}4">
+                                    <label class="custom-control-label" for="check{{$i}}4"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>13:10 - 14:10</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check5" name="moduloReservado[]" value="5">
-                                <label class="custom-control-label" for="check5"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}5"i name="moduloReservado[]" value="{{$i}}5">
+                                    <label class="custom-control-label" for="check{{$i}}5"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>14:30 - 15:30</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check6" name="moduloReservado[]" value="6">
-                                <label class="custom-control-label" for="check6"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}6"i name="moduloReservado[]" value="{{$i}}6">
+                                    <label class="custom-control-label" for="check{{$i}}6"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>15:35 - 16:35</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check7" name="moduloReservado[]" value="7">
-                                <label class="custom-control-label" for="check7"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}7"i name="moduloReservado[]" value="{{$i}}7">
+                                    <label class="custom-control-label" for="check{{$i}}7"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>16:50 - 17:50</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check8" name="moduloReservado[]" value="8">
-                                <label class="custom-control-label" for="check8"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}8"i name="moduloReservado[]" value="{{$i}}8">
+                                    <label class="custom-control-label" for="check{{$i}}8"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>17:55 - 18:55</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check9" name="moduloReservado[]" value="9">
-                                <label class="custom-control-label" for="check9"></label>
-                            </div>
-                        </td>
+                        @for($i = 0; $i < 7; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}9"i name="moduloReservado[]" value="{{$i}}9">
+                                    <label class="custom-control-label" for="check{{$i}}9"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
 
                     <tr>
                         <td>19:10 - 20:10</td>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="check10" name="moduloReservado[]" value="10">
-                                <label class="custom-control-label" for="check10"></label>
-                            </div>
-                        </td>
+                        @for($i = 1; $i < 8; $i++)
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}0"i name="moduloReservado[]" value="{{$i}}0">
+                                    <label class="custom-control-label" for="check{{$i}}0"></label>
+                                </div>
+                            </td>
+                        @endfor
                     </tr>
                 </tbody>
                 </table>
