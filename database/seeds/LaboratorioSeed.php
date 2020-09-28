@@ -57,21 +57,21 @@ class LaboratorioSeed extends Seeder{
         DB::table('modulos_reservados')->insert([
             'idReserva' => '1',
             'codigoLab' => 'A01',
-            'moduloReservado' => '2',
+            'moduloReservado' => '02',
             'fecha' => '2020-08-19'
         ]);
 
         DB::table('modulos_reservados')->insert([
             'idReserva' => '2',
             'codigoLab' => 'A01',
-            'moduloReservado' => '6',
+            'moduloReservado' => '06',
             'fecha' => '2020-08-21'
         ]);
 
         DB::table('modulos_reservados')->insert([
             'idReserva' => '3',
             'codigoLab' => 'A02',
-            'moduloReservado' => '3',
+            'moduloReservado' => '03',
             'fecha' => '2020-08-25'
         ]);
     }

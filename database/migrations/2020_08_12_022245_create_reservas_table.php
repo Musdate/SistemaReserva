@@ -13,7 +13,7 @@ class CreateReservasTable extends Migration{
             $table->string('rutUsuario')->index();
             $table->string('codigoLab')->index();
             $table->string('motivoReserva');
-            $table->string('moduloReservado', 20);
+            $table->string('moduloReservado');
             $table->date('fechaInicio', 20);
             $table->date('fechaFin', 20);
             $table->timestamps();

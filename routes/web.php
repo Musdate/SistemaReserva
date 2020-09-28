@@ -42,7 +42,7 @@ Route::get('/EditarAdmin/{user}', 'UserController@detailsAdmin')->name('admin.de
 Route::put('/EditarAdmin/{user}', 'UserController@updateAdmin')->name('admin.update.route');
 
 //Rutas Reservas
-Route::get('/Reservas', 'ReservaController@index1');
+Route::get('/Reservas', 'ReservaController@index_listado');
 Route::get('/AgregarReserva','ReservaController@form');
 Route::post('/AgregarReserva','ReservaController@create');
 Route::get('Evento/details/{id}','ReservaController@details');

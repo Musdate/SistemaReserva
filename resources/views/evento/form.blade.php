@@ -79,7 +79,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}1"i name="moduloReservado[]" value="{{$i}}1">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}1" name="moduloReservado[]" value="{{$i}}1">
                                     <label class="custom-control-label" for="check{{$i}}1"></label>
                                 </div>
                             </td>
@@ -91,7 +91,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}2"i name="moduloReservado[]" value="{{$i}}2">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}2" name="moduloReservado[]" value="{{$i}}2">
                                     <label class="custom-control-label" for="check{{$i}}2"></label>
                                 </div>
                             </td>
@@ -103,7 +103,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}3"i name="moduloReservado[]" value="{{$i}}3">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}3" name="moduloReservado[]" value="{{$i}}3">
                                     <label class="custom-control-label" for="check{{$i}}3"></label>
                                 </div>
                             </td>
@@ -115,7 +115,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}4"i name="moduloReservado[]" value="{{$i}}4">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}4" name="moduloReservado[]" value="{{$i}}4">
                                     <label class="custom-control-label" for="check{{$i}}4"></label>
                                 </div>
                             </td>
@@ -127,7 +127,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}5"i name="moduloReservado[]" value="{{$i}}5">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}5" name="moduloReservado[]" value="{{$i}}5">
                                     <label class="custom-control-label" for="check{{$i}}5"></label>
                                 </div>
                             </td>
@@ -139,7 +139,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}6"i name="moduloReservado[]" value="{{$i}}6">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}6" name="moduloReservado[]" value="{{$i}}6">
                                     <label class="custom-control-label" for="check{{$i}}6"></label>
                                 </div>
                             </td>
@@ -151,7 +151,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}7"i name="moduloReservado[]" value="{{$i}}7">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}7" name="moduloReservado[]" value="{{$i}}7">
                                     <label class="custom-control-label" for="check{{$i}}7"></label>
                                 </div>
                             </td>
@@ -163,7 +163,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}8"i name="moduloReservado[]" value="{{$i}}8">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}8" name="moduloReservado[]" value="{{$i}}8">
                                     <label class="custom-control-label" for="check{{$i}}8"></label>
                                 </div>
                             </td>
@@ -175,7 +175,7 @@
                         @for($i = 0; $i < 7; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}9"i name="moduloReservado[]" value="{{$i}}9">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}9" name="moduloReservado[]" value="{{$i}}9">
                                     <label class="custom-control-label" for="check{{$i}}9"></label>
                                 </div>
                             </td>
@@ -187,7 +187,7 @@
                         @for($i = 1; $i < 8; $i++)
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}0"i name="moduloReservado[]" value="{{$i}}0">
+                                    <input type="checkbox" class="custom-control-input" id="check{{$i}}0" name="moduloReservado[]" value="{{$i}}0">
                                     <label class="custom-control-label" for="check{{$i}}0"></label>
                                 </div>
                             </td>
