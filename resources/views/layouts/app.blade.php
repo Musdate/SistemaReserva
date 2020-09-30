@@ -52,17 +52,18 @@
 <body>
 
     <header>
-        <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            
-            <a class="navbar-brand" href="/"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-            </svg></a>
+        <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-inverse">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><svg width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg></a>
+              </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav">
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
@@ -75,8 +76,7 @@
 
                 <!-- Si es Admin -->
                 @if ( Auth::user()->tipoUsuarioID == '0' )
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
+                    <ul class="nav navbar-nav">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Laboratorios
@@ -86,7 +86,6 @@
                                     <a class="dropdown-item" href="{{ url('/Laboratorios') }}">Listado de Laboratorios</a>
                                 </div>
                             </div>
-                        </li>
 
                         <li class="nav-item">
                             <div class="dropdown">
