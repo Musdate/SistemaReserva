@@ -51,67 +51,67 @@
 
 <body>
 
-<header>
-    <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        
-        <a class="navbar-brand" href="/"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-          </svg></a>
+    <header>
+        <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            
+            <a class="navbar-brand" href="/"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            </svg></a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
 
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Iniciar Sesion</a>
-                    </li>
-                @else
-            </ul>
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Iniciar Sesion</a>
+                        </li>
+                    @else
+                </ul>
 
-            <!-- Left Side Of Navbar -->
+                <!-- Left Side Of Navbar -->
 
-            <!-- Si es Admin -->
-            @if ( Auth::user()->tipoUsuarioID == '0' )
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Laboratorios
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ url('/AgregarLaboratorio') }}">Agregar Laboratorio</a>
-                                <a class="dropdown-item" href="{{ url('/Laboratorios') }}">Listado de Laboratorios</a>
+                <!-- Si es Admin -->
+                @if ( Auth::user()->tipoUsuarioID == '0' )
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Laboratorios
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url('/AgregarLaboratorio') }}">Agregar Laboratorio</a>
+                                    <a class="dropdown-item" href="{{ url('/Laboratorios') }}">Listado de Laboratorios</a>
+                                </div>
                             </div>
-                          </div>
-                    </li>
+                        </li>
 
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Encargados
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ url('/AgregarEncargado') }}">Agregar Encargado</a>
-                                <a class="dropdown-item" href="{{ url('/Encargados') }}">Listado de Encargados</a>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Encargados
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url('/AgregarEncargado') }}">Agregar Encargado</a>
+                                    <a class="dropdown-item" href="{{ url('/Encargados') }}">Listado de Encargados</a>
+                                </div>
                             </div>
-                          </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Usuarios
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ url('/AgregarUsuario') }}">Agregar Usuario</a>
-                                <a class="dropdown-item" href="{{ url('/Usuarios') }}">Listado de Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usuarios
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="{{ url('/AgregarUsuario') }}">Agregar Usuario</a>
+                                    <a class="dropdown-item" href="{{ url('/Usuarios') }}">Listado de Usuarios</a>
+                                </div>
                             </div>
-                          </div>
-                    </li>
-                    <li class="nav-item">
-                        <div class="dropdown">
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                               Administrador
                             </button>

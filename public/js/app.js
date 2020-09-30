@@ -49885,3 +49885,11 @@ module.exports = __webpack_require__(/*! D:\Proyectos\SistemaReserva2\resources\
 /***/ })
 
 /******/ });
+
+$(".toggle").on("click", function () {
+  $(".container").stop().addClass("active");
+});
+
+$(".close").on("click", function () {
+  $(".container").stop().removeClass("active");
+});
