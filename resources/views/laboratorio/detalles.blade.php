@@ -68,7 +68,7 @@
                         @for ($j = 0 ; $j < count($arrayModulos); $j++)
                             @php($aux=0)
                             @for ($i = $cont; $i < 11; $i++)
-                                
+
                                 @foreach ($dayweek['evento'] as $event)
                                     @if ($event->moduloReservado == $arrayModulos[$j])
                                         @if ($i==$event->moduloReservado || $i==$event->moduloReservado - 10 || $i==$event->moduloReservado - 20 || $i==$event->moduloReservado - 30 || $i==$event->moduloReservado - 40 || $i==$event->moduloReservado - 50 || $i==$event->moduloReservado - 60)
@@ -91,14 +91,14 @@
 
                         <!-- imprime el resto de eventos hasta el modulo 10 -->
                         @if (!$dayweek['evento']->isEmpty())
-                                @if ($cont < 11)
-                                    @for ($i = $cont; $i < 11; $i++)
-                                        <a class="badge badge-warning" style="width: 63px;">
-                                            Modulo {{$i}}
-                                        </a>
-                                    @endfor
-                                @endif
+                            @if ($cont < 11)
+                                @for ($i = $cont; $i < 11; $i++)
+                                    <a class="badge badge-warning" style="width: 63px;">
+                                        Modulo {{$i}}
+                                    </a>
+                                @endfor
                             @endif
+                        @endif
 
                     </div>
                 @else

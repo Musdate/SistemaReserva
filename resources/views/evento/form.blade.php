@@ -4,7 +4,15 @@
 
 @section('content')
 
-    </br>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 
     @if ($message = Session::get('success'))
       <div class="alert alert-success alert-block">
@@ -12,6 +20,7 @@
           <strong>{{ $message }}</strong>
       </div>
     @endif
+
     @if ($message = Session::get('failure'))
       <div class="alert alert-danger alert-block">
           <button type="button" class="close" data-dismiss="alert">×</button>
@@ -27,41 +36,87 @@
 
             <form method="POST" action="{{ url('/AgregarReserva') }}">
                 @csrf
-                <div class="fomr-group">
-                  <label>Rut Usuario:</label>
-                  <input type="text" readonly class="form-control" name="rutUsuario" value="{{old('rut', Auth::user()->rut)}}"></br>
+                <div class="form-group">
+                  <label for="rutUsuario">Rut Usuario:</label>
+                  <input type="text" readonly class="form-control" id="rutUsuario" name="rutUsuario" value="{{old('rutUsuario', Auth::user()->rut)}}">
                 </div>
 
                 <div class="form-group">
-                    <label for="lab">Codigo Laboratorio</label>
-                    <select class="custom-select d-block w-100" id="lab" name="codigoLab" required>
-                        <option value="">Elegir...</option>
+                    <label for="codigoLab">Codigo Laboratorio</label>
+                    <select class="custom-select d-block w-100" id="codigoLab" name="codigoLab" required>
+                        @if (old('codigoLab'))
+                            <option value="{{old('codigoLab')}}">{{old('codigoLab')}}</option>
+                        @else
+                            <option value="">Elegir...</option>
+                        @endif
                         @foreach ($labs as $lab)
                         <option value="{{$lab->codigoLab}}">{{$lab->codigoLab}}</option>
                         @endforeach
                     </select>
                 </div>
 
-                <div class="fomr-group">
-                    <label for="Textarea1">Motivo de la Reserva:</label>
-                    <textarea class="form-control" id="Textarea1" rows="2" name="motivoReserva"></textarea>
-                </div></br>
+                <div class="form-group">
+                    <label for="motivoReserva">Motivo de la Reserva:</label>
+                    <textarea type="text" class="form-control" rows="2" id="motivoReserva" name="motivoReserva">{{old('motivoReserva')}}</textarea>
+                </div>
 
-                <div class="form-row">
-                    <div class="col">
-                        <label>Fecha Inicio:</label>
-                        <input type="date" class="form-control" name="fechaInicio">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="fechaInicio">Fecha Inicio:</label>
+                            <input type="date" class="form-control" id="fechaInicio" name="fechaInicio" value="{{old('fechaInicio')}}">
+                        </div>
+                        <div class="col">
+                            <label for="fechaFin">Fecha Fin:</label>
+                            <input type="date" class="form-control" id="fechaFin" name="fechaFin" value="{{old('fechaFin')}}">
+                        </div>
                     </div>
-                    <div class="col">
-                        <label>Fecha Fin:</label>
-                        <input type="date" class="form-control" name="fechaFin">
+                    </div></br>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-1.">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkSem1" name="semanaReservada[]" value="1" checked>
+                                        <label class="custom-control-label" for="checkSem1">Semana 1</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkSem2" name="semanaReservada[]" value="2" checked>
+                                        <label class="custom-control-label" for="checkSem2">Semana 2</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkSem3" name="semanaReservada[]" value="3" checked>
+                                        <label class="custom-control-label" for="checkSem3">Semana 3</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkSem4" name="semanaReservada[]" value="4" checked>
+                                        <label class="custom-control-label" for="checkSem4">Semana 4</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="checkSem5" name="semanaReservada[]" value="5" checked>
+                                        <label class="custom-control-label" for="checkSem5">Semana 5</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div></br></br>
+                </div></br>
 
                 <table class="table table-bordered">
 
                 <thead style="text-align: center;">
                     <tr class="table-primary">
+                        <th>N°</th>
                         <th>Módulos</th>
                         <th>Lunes</th>
                         <th>Martes</th>
@@ -75,6 +130,7 @@
 
                 <tbody  style="text-align: center;">
                     <tr>
+                        <th>1</th>
                         <td>08:30 - 09:30</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -87,6 +143,7 @@
                     </tr>
 
                     <tr>
+                        <th>2</th>
                         <td>09:35 - 10:35</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -99,6 +156,7 @@
                     </tr>
 
                     <tr>
+                        <th>3</th>
                         <td>10:50 - 11:50</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -111,6 +169,7 @@
                     </tr>
 
                     <tr>
+                        <th>4</th>
                         <td>11:55 - 12:55</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -123,6 +182,7 @@
                     </tr>
 
                     <tr>
+                        <th>5</th>
                         <td>13:10 - 14:10</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -135,6 +195,7 @@
                     </tr>
 
                     <tr>
+                        <th>6</th>
                         <td>14:30 - 15:30</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -147,6 +208,7 @@
                     </tr>
 
                     <tr>
+                        <th>7</th>
                         <td>15:35 - 16:35</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -159,6 +221,7 @@
                     </tr>
 
                     <tr>
+                        <th>8</th>
                         <td>16:50 - 17:50</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -171,6 +234,7 @@
                     </tr>
 
                     <tr>
+                        <th>9</th>
                         <td>17:55 - 18:55</td>
                         @for($i = 0; $i < 7; $i++)
                             <td>
@@ -183,6 +247,7 @@
                     </tr>
 
                     <tr>
+                        <th>10</th>
                         <td>19:10 - 20:10</td>
                         @for($i = 1; $i < 8; $i++)
                             <td>
@@ -199,7 +264,7 @@
                 </br><button type="submit" class="btn btn-info" style="width: 130px;">Guardar</button></br></br>
 
             </form>
-            <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
+            <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a></br></br>
         </div>
     </div>
 

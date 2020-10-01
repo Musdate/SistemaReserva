@@ -14,6 +14,7 @@ class CreateReservasTable extends Migration{
             $table->string('codigoLab')->index();
             $table->string('motivoReserva');
             $table->string('moduloReservado');
+            $table->string('semanaReservada');
             $table->date('fechaInicio', 20);
             $table->date('fechaFin', 20);
             $table->timestamps();

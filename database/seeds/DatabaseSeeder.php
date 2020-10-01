@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder{
         DB::table('users')->truncate();
         DB::table('laboratorios')->truncate();
         DB::table('tipousuario')->truncate();
+        DB::table('modulos_reservados')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
 
         $this->call(TipoUsuarioSeed::class);

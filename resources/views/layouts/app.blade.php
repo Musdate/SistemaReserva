@@ -37,6 +37,7 @@
     .box-day{
       border:1px solid #E3E9E5;
       height:150px;
+      background-color: white;
     }
     .box-dayoff{
       border:1px solid #E3E9E5;
