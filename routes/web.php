@@ -42,7 +42,7 @@ Route::get('/EditarAdmin/{user}', 'UserController@detailsAdmin')->name('admin.de
 Route::put('/EditarAdmin/{user}', 'UserController@updateAdmin')->name('admin.update.route');
 
 //Rutas Reservas
-Route::get('/Reservas', 'ReservaController@index_listado');
+Route::get('/Reservas', 'ReservaController@index_listado')->name('reserva.listado.route');
 Route::get('/AgregarReserva','ReservaController@form');
 Route::post('/AgregarReserva','ReservaController@create');
 Route::get('Evento/details/{id}','ReservaController@details');
@@ -51,14 +51,6 @@ Route::get('Evento/index/{month}','ReservaController@index_month');
 Route::post('Evento/calendario','ReservaController@calendario');
 Route::put('/EditarReserva/{id}', 'ReservaController@update')->name('reserva.update.route');
 Route::get('/EliminarReserva/{id}', 'ReservaController@delete')->name('reserva.delete.route');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

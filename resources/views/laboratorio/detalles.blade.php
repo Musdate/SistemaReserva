@@ -58,47 +58,49 @@
                         {{ $dayweek['dia']  }}</br>
                         <!-- imprime eventos -->
 
-                        @php($arrayModulos=array())
-                        @foreach ($dayweek['evento'] as $event)
-                            @php(array_push($arrayModulos, $event->moduloReservado))
-                        @endforeach
-                        @php(sort($arrayModulos))
+                            @php($arrayModulos=array())
+                            @foreach ($dayweek['evento'] as $event)
+                                @php(array_push($arrayModulos, $event->moduloReservado))
+                            @endforeach
+                            @php(sort($arrayModulos))
 
-                        @php($cont=1)
-                        @for ($j = 0 ; $j < count($arrayModulos); $j++)
-                            @php($aux=0)
-                            @for ($i = $cont; $i < 11; $i++)
-
-                                @foreach ($dayweek['evento'] as $event)
-                                    @if ($event->moduloReservado == $arrayModulos[$j])
-                                        @if ($i==$event->moduloReservado || $i==$event->moduloReservado - 10 || $i==$event->moduloReservado - 20 || $i==$event->moduloReservado - 30 || $i==$event->moduloReservado - 40 || $i==$event->moduloReservado - 50 || $i==$event->moduloReservado - 60)
-                                            <a class="badge badge-danger" href="{{ asset('/Evento/details/') }}/{{ $event->idReserva }}" style="width: 63px;">
-                                                Modulo {{$i}} 
-                                            </a>
-                                            @php($aux=1)
-                                            @php($cont++)
-                                        @endif
-                                    @endif
-                                @endforeach
-                                @if($aux == 0)
-                                    <a class="badge badge-warning" style="width: 63px;">
-                                        Modulo {{$i}}
-                                    </a>
-                                    @php($cont++)
-                                @endif
-                            @endfor
-                        @endfor
-
-                        <!-- imprime el resto de eventos hasta el modulo 10 -->
-                        @if (!$dayweek['evento']->isEmpty())
-                            @if ($cont < 11)
+                            @php($cont=1)
+                            @for ($j = 0 ; $j < count($arrayModulos); $j++)
+                                @php($aux=0)
                                 @for ($i = $cont; $i < 11; $i++)
-                                    <a class="badge badge-warning" style="width: 63px;">
-                                        Modulo {{$i}}
-                                    </a>
+
+                                    @foreach ($dayweek['evento'] as $event)
+                                        @if ($event->moduloReservado == $arrayModulos[$j])
+                                            @if ($i==$event->moduloReservado || $i==$event->moduloReservado - 10 || $i==$event->moduloReservado - 20 || $i==$event->moduloReservado - 30 || $i==$event->moduloReservado - 40 || $i==$event->moduloReservado - 50 || $i==$event->moduloReservado - 60)
+                                                <a class="badge badge-danger" @if(Auth::check()) href="{{ asset('/Evento/details/') }}/{{ $event->idReserva }}" @else href="" @endif style="width: 63px;">
+                                                    Modulo {{$i}} 
+                                                </a>
+                                                @php($aux=1)
+                                                @php($cont++)
+                                            @endif
+                                        @endif
+                                    @endforeach
+                                    @if($aux == 0)
+                                        <a class="badge badge-light" style="width: 63px;">
+                                            Modulo {{$i}}
+                                        </a>
+                                        @php($cont++)
+                                    @endif
                                 @endfor
+                            @endfor
+
+                            <!-- imprime el resto de eventos hasta el modulo 10 -->
+                            @if (!$dayweek['evento']->isEmpty())
+                                @if ($cont < 11)
+                                    @for ($i = $cont; $i < 11; $i++)
+                                        <a class="badge badge-light" style="width: 63px;">
+                                            Modulo {{$i}}
+                                        </a>
+                                    @endfor
+                                @endif
                             @endif
-                        @endif
+
+
 
                     </div>
                 @else
@@ -108,6 +110,6 @@
         </div>
     @endforeach
 
-    </br><a href="{{ url('/Laboratorios') }}"><button type="submit" class="btn btn-primary" style="width: 160px;">Atras</button></a>
+    </br><a href="{{ url('/Laboratorios') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
 
 @endsection

@@ -45,7 +45,10 @@
                 </tr>
             </tbody>
         </table>
-        
+
+        <!-- Boton Atras -->
+        <a href="/"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
+
     @else <!-- Usuario Registrado -->
 
     </br><h1>Laboratorios</h1></br>
@@ -109,7 +112,8 @@
         </tbody>
     </table>
 
-    <a href="{{ url('/') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a></br></br>
+    <!-- Boton Atras -->
+    <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
     @endguest
 
 @endsection

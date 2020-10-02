@@ -71,14 +71,15 @@
                             <input type="date" class="form-control" id="fechaFin" name="fechaFin" value="{{old('fechaFin')}}">
                         </div>
                     </div>
-                    </div></br>
+                </div>
 
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-1.">
+                            <label>¿ Entre Semanas ?</label>
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                <div class="custom-control custom-checkbox">
+                                    <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="checkSem1" name="semanaReservada[]" value="1" checked>
                                         <label class="custom-control-label" for="checkSem1">Semana 1</label>
                                     </div>
@@ -109,10 +110,28 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-1.">
+                            <label>¿ Como desea la Reserva ?</label>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="c1" name="" value="1" checked>
+                                        <label class="custom-control-label" for="c1">Todo o Nada</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="c2" name="" value="2">
+                                        <label class="custom-control-label" for="c2">La otra Opcion</label>
+                                    </div>
+                                </li>
+                                Seleccione solo 1 porfa :(
+                            </ul>
+                        </div>
                     </div>
-                </div></br>
+                </div>
 
-                <table class="table table-bordered">
+                </br><table class="table table-bordered">
 
                 <thead style="text-align: center;">
                     <tr class="table-primary">
@@ -264,6 +283,7 @@
                 </br><button type="submit" class="btn btn-info" style="width: 130px;">Guardar</button></br></br>
 
             </form>
+            <!-- Boton Atras -->
             <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a></br></br>
         </div>
     </div>

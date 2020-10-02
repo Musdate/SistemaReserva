@@ -60,6 +60,7 @@
       </form>
 
       <div class="button-container">
+        <!-- Boton Atras -->
         <a href="/"><button><span>Volver</span></button></a>
       </div>
     </div>
