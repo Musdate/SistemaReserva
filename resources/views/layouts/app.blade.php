@@ -84,7 +84,7 @@
 
                 <!-- Si es Admin -->
                 @if ( Auth::user()->tipoUsuarioID == '0' )
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav mr-auto">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Laboratorios
