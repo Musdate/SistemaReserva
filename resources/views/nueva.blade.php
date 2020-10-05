@@ -38,7 +38,7 @@
     @if ($veriVariable)
         <div class="alert alert-danger alert-block">
             <button type="button" class="close" data-dismiss="alert">×</button>
-            <li><strong>Estos son los Modulos NO Disponibles. Marque la Opcion "Reservar Solo Disponibles" si desea hacer la Reserva de todas formas.</strong></li>
+            <li><strong>Estos son los Modulos NO Disponibles, Marque la Opcion "Reservar Solo Disponibles" si desea hacer la Reserva de todas formas.</strong></li>
         </div>
         @foreach ($veriVariable as $veri)
             <div class="alert alert-danger alert-block">
