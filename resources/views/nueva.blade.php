@@ -22,10 +22,17 @@
     @endif
 
     @if ($mensaje)
-      <div class="alert alert-danger alert-block">
-          <button type="button" class="close" data-dismiss="alert">×</button>
-          <strong>{{ $mensaje }}</strong>
-      </div>
+        @if ($mensaje == "Reserva Exitosa!")
+            <div class="alert alert-success alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $mensaje }}</strong>
+            </div>
+        @else
+            <div class="alert alert-danger alert-block">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <strong>{{ $mensaje }}</strong>
+            </div>
+        @endif
     @endif
 
     @if ($veriVariable)

@@ -419,7 +419,7 @@ class ReservaController extends Controller{
           $mensaje = "Reserva Exitosa!";
           $veriVariable = array();
           $modDisponibles = array();
-          $datos = array();
+          $datos = $request->all();
           return view("nueva", compact('mensaje', 'veriVariable', 'modDisponibles', 'datos', 'labs'));
         }
         $mensaje = "Ningun Modulo está Disponibles.";
@@ -610,7 +610,7 @@ class ReservaController extends Controller{
       'moduloReservado' => 'required',
       'semanaReservada' => 'required',
       'fechaInicio'     => 'required',
-      'fechaFin'        => 'required'           
+      'fechaFin'        => 'required'
     ]);
 
     $modulosAgregados = array();

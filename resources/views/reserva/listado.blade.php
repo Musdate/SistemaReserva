@@ -31,7 +31,7 @@
                                 @if (Auth::user()->rol == 'Estudiante')
                                     <td class="font-weight-bold text-secondary" style="text-align: center;">Estudiante</td>
                                 @else
-                                    <td  class="font-weight-bold text-primary" style="text-align: center;">{{ $user->rol }}</td>
+                                    <td  class="font-weight-bold text-primary" style="text-align: center;">{{ Auth::user()->rol }}</td>
                                 @endif                            
                             <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
                             <td style="text-align: center;">{{ $reserva->moduloReservado}}</td>
