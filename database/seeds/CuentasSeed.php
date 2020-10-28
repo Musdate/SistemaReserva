@@ -12,7 +12,7 @@ class CuentasSeed extends Seeder{
         DB::table('users')->insert([
             'tipoUsuarioID' => '0',
             'rut' => '19000000',
-            'nombre' => 'nombreAdmin',
+            'nombre' => 'Nombre Admin',
             'telefono' => '953000000',
             'rol' => 'Profesor',
             'email' => 'admin@gmail.com',
@@ -24,7 +24,7 @@ class CuentasSeed extends Seeder{
         DB::table('users')->insert([
             'tipoUsuarioID' => '1',
             'rut' => '19000001',
-            'nombre' => 'nombreEncargado1',
+            'nombre' => 'Nombre Encargado1',
             'telefono' => '953000001',
             'rol' => 'Encargado de Laboratorio',
             'email' => 'encargado1@gmail.com',
@@ -35,7 +35,7 @@ class CuentasSeed extends Seeder{
         DB::table('users')->insert([
             'tipoUsuarioID' => '1',
             'rut' => '19000002',
-            'nombre' => 'nombreEncargado2',
+            'nombre' => 'Nombre Encargado2',
             'email' => 'encargado2@gmail.com',
             'telefono' => '953000002',
             'rol' => 'Encargado de Laboratorio',
@@ -46,8 +46,8 @@ class CuentasSeed extends Seeder{
         DB::table('users')->insert([
             'tipoUsuarioID' => '2',
             'rut' => '19000003',
-            'nombre' => 'nombreUsuario',
-            'email' => 'usuario@gmail.com',
+            'nombre' => 'Nombre Usuario1',
+            'email' => 'usuario1@gmail.com',
             'telefono' => '953000003',
             'rol' => 'Estudiante',
             'password' => Hash::make('1234'),
@@ -57,7 +57,7 @@ class CuentasSeed extends Seeder{
         DB::table('users')->insert([
             'tipoUsuarioID' => '2',
             'rut' => '19000004',
-            'nombre' => 'nombreUsuario2',
+            'nombre' => 'Nombre Usuario2',
             'email' => 'usuario2@gmail.com',
             'telefono' => '953000003',
             'rol' => 'Profesor',

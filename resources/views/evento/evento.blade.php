@@ -93,41 +93,89 @@
                         </div>
                     </div></br>
 
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col-1.">
-                                <ul class="list-group">
-                                    <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkSem1" name="semanaReservada[]" value="1" checked>
-                                            <label readonly class="custom-control-label" for="checkSem1">Semana 1</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-tittle" style="text-align: center;">
+                                            <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse1" style="width: 529px; border: none;">Reserva Entre Semanas</button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="checkSem1" name="semanaReservada[]" value="1" checked>
+                                                        <label readonly class="custom-control-label" for="checkSem1">Semana 1</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="checkSem2" name="semanaReservada[]" value="2" checked>
+                                                        <label class="custom-control-label" for="checkSem2">Semana 2</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="checkSem3" name="semanaReservada[]" value="3" checked>
+                                                        <label class="custom-control-label" for="checkSem3">Semana 3</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="checkSem4" name="semanaReservada[]" value="4" checked>
+                                                        <label class="custom-control-label" for="checkSem4">Semana 4</label>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="checkSem5" name="semanaReservada[]" value="5" checked>
+                                                        <label class="custom-control-label" for="checkSem5">Semana 5</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div></br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="text-align: center;">
+                                        <h4 class="panel-tittle">
+                                            <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse2" style="width: 529px; border: none;">Eliminar intervalo de fechas</button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="card">
+                                                <div class="container">
+                                                    <div class="form-row">
+                                                        <div class="col">
+                                                            <label for="intervaloFechaInicio" style="margin-top: 7px;">Fecha Inicio:</label>
+                                                            @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
+                                                                <input type="date" class="form-control" id="intervaloFechaInicio" name="intervaloFechaInicio" value="">
+                                                            @else
+                                                                <input type="date" readonly class="form-control" id="intervaloFechaInicio" name="intervaloFechaInicio" value="">
+                                                            @endif
+                                                        </div>
+                                                        <div class="col">
+                                                            <label for="intervaloFechaFin" style="margin-top: 7px;">Fecha Fin:</label>
+                                                            @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
+                                                                <input type="date" class="form-control" id="intervaloFechaFin" name="intervaloFechaFin" value="">
+                                                            @else
+                                                                <input type="date" readonly class="form-control" id="intervaloFechaFin" name="intervaloFechaFin" value="">
+                                                            @endif
+                                                        </div>
+                                                    </div></br>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkSem2" name="semanaReservada[]" value="2" checked>
-                                            <label class="custom-control-label" for="checkSem2">Semana 2</label>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkSem3" name="semanaReservada[]" value="3" checked>
-                                            <label class="custom-control-label" for="checkSem3">Semana 3</label>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkSem4" name="semanaReservada[]" value="4" checked>
-                                            <label class="custom-control-label" for="checkSem4">Semana 4</label>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="checkSem5" name="semanaReservada[]" value="5" checked>
-                                            <label class="custom-control-label" for="checkSem5">Semana 5</label>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div></br>

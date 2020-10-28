@@ -25,7 +25,7 @@
             <tbody>
 
                 @foreach ($reservas as $reserva)
-                    @if($reserva->rutUsuario == Auth::user()->rut)
+                    @if ($reserva->rutUsuario == Auth::user()->rut)
                         <tr>
                             <th scope="row" style="text-align: center;">{{ $reserva->rutUsuario }}</th>
                                 @if (Auth::user()->rol == 'Estudiante')
@@ -34,7 +34,77 @@
                                     <td  class="font-weight-bold text-primary" style="text-align: center;">{{ Auth::user()->rol }}</td>
                                 @endif                            
                             <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
-                            <td style="text-align: center;">{{ $reserva->moduloReservado}}</td>
+                            <td style="text-align: center;">
+                                <div class="panel-group">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" style="text-align: center;">
+                                            <h4 class="panel-tittle">
+                                                <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse{{$reserva->id}}" style="width: 250px; border: none;">Ver Modulos</button>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse{{$reserva->id}}" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <!--Tabla-->
+                                                <table class="table table-bordered table-sm">
+                                                    <thead>
+                                                        <tr>
+                                                        <th scope="col">Lu</th>
+                                                        <th scope="col">Ma</th>
+                                                        <th scope="col">Mi</th>
+                                                        <th scope="col">Ju</th>
+                                                        <th scope="col">Vi</th>
+                                                        <th scope="col">Sa</th>
+                                                        <th scope="col">Do</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @php ($modulos = explode(',',$reserva->moduloReservado))
+                                                        @for ($i = 1; $i < 11; $i++)
+                                                        <tr>
+                                                            <th>
+                                                                @if (in_array($i,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+10,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+20,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+30,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+40,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+50,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                            <th>
+                                                                @if (in_array($i+60,$modulos))
+                                                                    {{$i}}
+                                                                @endif
+                                                            </th>
+                                                        </tr>
+                                                        @endfor
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                             <td style="text-align: center;">{{ $reserva->fechaInicio}}</td>
                             <td style="text-align: center;">{{ $reserva->fechaFin}}</td>
                             <td style="text-align: center;">
@@ -99,7 +169,77 @@
                             @endif
                         @endforeach
                         <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
-                        <td style="text-align: center;">{{ $reserva->moduloReservado}}</td>
+                        <td style="text-align: center;">
+                            <div class="panel-group">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" style="text-align: center;">
+                                        <h4 class="panel-tittle">
+                                            <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse{{$reserva->id}}" style="width: 250px; border: none;">Ver Modulos</button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse{{$reserva->id}}" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <!--Tabla-->
+                                            <table class="table table-bordered table-sm">
+                                                <thead>
+                                                    <tr>
+                                                    <th scope="col">Lu</th>
+                                                    <th scope="col">Ma</th>
+                                                    <th scope="col">Mi</th>
+                                                    <th scope="col">Ju</th>
+                                                    <th scope="col">Vi</th>
+                                                    <th scope="col">Sa</th>
+                                                    <th scope="col">Do</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @php ($modulos = explode(',',$reserva->moduloReservado))
+                                                    @for ($i = 1; $i < 11; $i++)
+                                                    <tr>
+                                                        <th>
+                                                            @if (in_array($i,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+10,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+20,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+30,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+40,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+50,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                        <th>
+                                                            @if (in_array($i+60,$modulos))
+                                                                {{$i}}
+                                                            @endif
+                                                        </th>
+                                                    </tr>
+                                                    @endfor
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
                         <td style="text-align: center;">{{ $reserva->fechaInicio}}</td>
                         <td style="text-align: center;">{{ $reserva->fechaFin}}</td>
                         <td style="text-align: center;">
