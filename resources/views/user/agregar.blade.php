@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="password" id="#password" required="required"name="password" placeholder="                      Contraseña">
+                    <input type="password" id="#password" required="required"name="password" placeholder="                     Contraseña">
                     <label for="password"> Contraseña: </label>
                     <div class="bar"></div>
                 </div>

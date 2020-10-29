@@ -31,25 +31,25 @@
             <form method="POST" action="{{url('/AgregarLaboratorio')}}">
                 @csrf
                 <div class="input-container">                 
-                    <input type="text" id="#codigo" required="required " name="codigoLab" placeholder="">
+                    <input type="text" id="#codigo" required="required " name="codigoLab" placeholder="                                   Código">
                     <label for="#codigo"> Codigo Laboratorio: </label>
                     <div class="bar"></div>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" id="#Nombre" required="required" name="nombreSala" placeholder="">
+                    <input type="text" id="#Nombre" required="required" name="nombreSala" placeholder="                        Nombre">
                     <label for="#Nombre"> Nombre Sala: </label>
                     <div class="bar"></div>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" id="#Capacidad" required="required" name="capacidadMax" placeholder="">
+                    <input type="text" id="#Capacidad" required="required" name="capacidadMax" placeholder="                    50">
                     <label for="#Capacidad"> Capacidad: </label>
                     <div class="bar"></div>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" id="#tipo" required="required" name="tipoLab" placeholder="">
+                    <input type="text" id="#tipo" required="required" name="tipoLab" placeholder="                                    Informatica">
                     <label for="#tipo"> Tipo de Laboratorio: </label>
                     <div class="bar"></div>
                 </div>

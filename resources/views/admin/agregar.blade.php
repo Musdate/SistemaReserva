@@ -31,13 +31,13 @@
             <form method="POST" action="{{url('/AgregarAdmin')}}">
                 @csrf
                 <div class="input-container">
-                    <input type="text" id="#rut" required="required" name="rut" placeholder="        11.111.111-1">
+                    <input type="text" id="#rut" required="required" name="rut" placeholder="       11.111.111-1">
                     <label for="rut"> Rut: </label>
                     <div class="bar"></div>
                 </div>
 
                 <div class="input-container">
-                    <input type="text" id="#nombre"required="required" name="nombre" placeholder="                Nombre">
+                    <input type="text" id="#nombre"required="required" name="nombre" placeholder="               Nombre">
                     <label for="nombre"> Nombre: </label>
                     <div class="bar"></div>
                 </div>
@@ -49,13 +49,13 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="email" id="#email"required="required" name="email" placeholder="            user@example.com">
+                    <input type="email" id="#email"required="required" name="email" placeholder="           user@example.com">
                     <label for="email"> Email: </label>
                     <div class="bar"></div>
                 </div>
 
                 <div class="input-container">
-                    <input type="password" required="required" name="password" id="#password" placeholder="                       Contraseña">
+                    <input type="password" required="required" name="password" id="#password" placeholder="                     Contraseña">
                     <label for="password"> Contraseña: </label>
                     <div class="bar"></div>
                 </div>
