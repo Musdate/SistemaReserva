@@ -11,11 +11,22 @@ class CuentasSeed extends Seeder{
         //Seed cuenta Admin
         DB::table('users')->insert([
             'tipoUsuarioID' => '0',
-            'rut' => '19000000',
-            'nombre' => 'Nombre Admin',
-            'telefono' => '953000000',
+            'rut' => '19595298',
+            'nombre' => 'Francisco Sepulveda',
+            'telefono' => '984057181',
             'rol' => 'Profesor',
-            'email' => 'admin@gmail.com',
+            'email' => 'francisco.sepulvedaaa@gmail.com',
+            'password' => Hash::make('1234'),
+            'remember_token' => Str::random(10),
+        ]);
+
+        DB::table('users')->insert([
+            'tipoUsuarioID' => '0',
+            'rut' => '19650675',
+            'nombre' => 'Bastian Troncoso',
+            'telefono' => '953244148',
+            'rol' => 'Profesor',
+            'email' => 'bastiantroncoso97@gmail.com',
             'password' => Hash::make('1234'),
             'remember_token' => Str::random(10),
         ]);
