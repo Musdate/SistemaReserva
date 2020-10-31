@@ -51,7 +51,6 @@
             <li><strong>Modulos Disponibles: {{ $modDisponibles }}</strong></li>
         </div>
     @endif
-    
 
     <div class="card border-primary">
 

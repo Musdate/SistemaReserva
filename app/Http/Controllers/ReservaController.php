@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Reserva;
 use Carbon\Carbon;
 use App\ModuloReservado;
-use App\Mail\AvisoDeEliminacion; 
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Mail\AvisoDeEliminacion;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class ReservaController extends Controller{
 
@@ -1372,20 +1373,21 @@ class ReservaController extends Controller{
   }
 
   public function delete($id){
-    
+
     $reserva = Reserva::find($id);
     $reservas = DB::table('reservas')->get();
     $users = DB::table('users')->get();
+    $user = User::FindByRut($reserva->rutUsuario);
 
     //Mail de eliminacion
     if(Auth::user()->tipoUsuarioID == '0'){
       if(Auth::user()->rut != $reserva->rutUsuario){
-        Mail::to(Auth::user()->email)->queue(new AvisoDeEliminacion);
-        return new AvisoDeEliminacion;
+        Mail::to($user->email)->queue(new AvisoDeEliminacion);
         $reserva->delete();
         return redirect('/Reservas')->with('users', 'reservas');
       }
     }
+
     $reserva->delete();
     return redirect('/Reservas')->with('users', 'reservas');
   }
