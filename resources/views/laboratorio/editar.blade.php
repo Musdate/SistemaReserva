@@ -55,7 +55,7 @@
 
             </form>
 
-            <a href="{{ url('/Laboratorios') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a></br></br>
+            <a href="{{ url('/Laboratorios') }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a></br></br>
 
         </div>
     </div>

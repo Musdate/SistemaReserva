@@ -59,6 +59,6 @@
   @endforeach</br>
 
   <!-- Boton Atras -->
-  <a href="/"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
+  <a href="/"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a>
      
 @endsection

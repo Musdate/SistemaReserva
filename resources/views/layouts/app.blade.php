@@ -184,8 +184,15 @@
 </header>
 
 <main class="py-4"></br></br></br>
-    <div class="container">
-        @yield('content')
+    <div class="form-row">
+        <div class="col-2">
+            @yield('info')
+        </div>
+        <div class="col-8">
+            @yield('content')
+        </div>
+        <div class="col-2">
+        </div>
     </div>
 </main>
 

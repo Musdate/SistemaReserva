@@ -134,7 +134,7 @@
             </tbody>
         </table>
         <!-- Boton Atras -->
-        <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
+        <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a>
 
     @else
 
@@ -268,7 +268,7 @@
             </tbody>
         </table>
         <!-- Boton Atras -->
-        <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Atras</button></a>
+        <a href="{{ url()->previous() }}"><button type="submit" class="btn btn-primary" style="width: 130px;">Volver</button></a>
 
     @endif
 

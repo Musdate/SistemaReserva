@@ -30,7 +30,7 @@
 
         <div class="card border-info">
 
-            <div class="card-header border-info"><h2>Reserva</h2></div>
+            <div class="card-header border-info"><h2>Reserva - {{$event->codigoLab}}</h2></div>
 
             <div class="card-body">
 
@@ -38,40 +38,53 @@
                     {{ method_field('PUT') }}
                     @csrf
 
-                    <div class="form-group">
-                        <label for="rutUsuario">Rut Usuario:</label>
-                        <input type="text" readonly class="form-control" id="rutUsuario" name="rutUsuario" value="{{old('rutUsuario', $event->rutUsuario)}}">
-                    </div>
+                    <div class="panel-group">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-tittle" style="text-align: center;">
+                                    <button type="button" class="btn btn-primary" data-toggle="collapse" href="#collapse0" style="width: 1223px; border: none;">Expandir Datos de la Reserva</button>
+                                </h4>
+                            </div>
+                            <div id="collapse0" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label for="rutUsuario">Rut Usuario:</label>
+                                        <input type="text" readonly class="form-control" id="rutUsuario" name="rutUsuario" value="{{old('rutUsuario', $event->rutUsuario)}}">
+                                    </div>
 
-                    <div class="form-group">
-                        <label for="codigoLab">Codigo Laboratorio</label>
-                        <!-- SI ES DUEÑO DE LA RESERVA -->
-                        @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
-                            <select class="custom-select d-block w-100" id="codigoLab" name="codigoLab" required>
-                                @if (old('codigoLab', $event->codigoLab))
-                                    <option value="{{$event->codigoLab}}">{{$event->codigoLab}}</option>
-                                @else
-                                    <option value="">Elegir...</option>
-                                @endif
-                                @foreach ($labs as $lab)
-                                    @if($lab->codigoLab == $event->codigoLab)
-                                    @else
-                                    <option value="{{$lab->codigoLab}}">{{$lab->codigoLab}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                        @else
-                            <input type="text" readonly class="form-control" id="codigoLab" name="codigoLab" value="{{old('codigoLab', $event->codigoLab)}}">
-                        @endif
-                    </div>
+                                    <div class="form-group">
+                                        <label for="codigoLab">Nombre Sala</label>
+                                        <!-- SI ES DUEÑO DE LA RESERVA -->
+                                        @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
+                                            <select class="custom-select d-block w-100" id="codigoLab" name="codigoLab" required>
+                                                @if (old('codigoLab', $event->codigoLab))
+                                                    <option value="{{$event->codigoLab}}">{{$event->codigoLab}}</option>
+                                                @else
+                                                    <option value="">Elegir...</option>
+                                                @endif
+                                                @foreach ($labs as $lab)
+                                                    @if($lab->codigoLab == $event->codigoLab)
+                                                    @else
+                                                    <option value="{{$lab->codigoLab}}">{{$lab->codigoLab}}</option>
+                                                    @endif
+                                                @endforeach
+                                            </select>
+                                        @else
+                                            <input type="text" readonly class="form-control" id="codigoLab" name="codigoLab" value="{{old('codigoLab', $event->codigoLab)}}">
+                                        @endif
+                                    </div>
 
-                    <div class="form-group">
-                        <label for="motivoReserva">Motivo de la Reserva:</label>
-                        @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
-                            <input type="text" class="form-control" name="motivoReserva" value="{{old('motivoReserva', $event->motivoReserva)}}">
-                        @else
-                            <input type="text" readonly class="form-control" name="motivoReserva" value="{{old('motivoReserva', $event->motivoReserva)}}">
-                        @endif
+                                    <div class="form-group">
+                                        <label for="motivoReserva">Motivo de la Reserva:</label>
+                                        @if ($event->rutUsuario == Auth::user()->rut || Auth::user()->tipoUsuarioID == 0)
+                                            <input type="text" class="form-control" name="motivoReserva" value="{{old('motivoReserva', $event->motivoReserva)}}">
+                                        @else
+                                            <input type="text" readonly class="form-control" name="motivoReserva" value="{{old('motivoReserva', $event->motivoReserva)}}">
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-row">
