@@ -30,11 +30,11 @@
 
             <form method="POST" action="{{url('/AgregarLaboratorio')}}">
                 @csrf
-                <div class="input-container">                 
-                    <input type="text" id="#codigo" required="required " name="codigoLab" placeholder="                                   Código">
-                    <label for="#codigo"> Codigo Laboratorio: </label>
+                <!--<div class="input-container">                 
+                    <input type="text" id="#codigo" required="required " name="codigoLab" placeholder="                      Código">
+                    <label for="#codigo"> Codigo Sala: </label>
                     <div class="bar"></div>
-                </div>
+                </div>-->
 
                 <div class="input-container">
                     <input type="text" id="#Nombre" required="required" name="nombreSala" placeholder="                        Nombre">

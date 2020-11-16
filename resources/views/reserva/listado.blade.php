@@ -14,7 +14,7 @@
                 <tr>
                     <th scope="col" style="text-align: center;">Rut Usuario</th>
                     <th scope="col" style="text-align: center;">Rol</th>
-                    <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
+                    <th scope="col" style="text-align: center;">Nombre Sala</th>
                     <th scope="col" style="text-align: center;">Modulos Reservados</th>
                     <th scope="col" style="text-align: center;">Fecha Inicio</th>
                     <th scope="col" style="text-align: center;">Fecha Fin</th>
@@ -33,7 +33,7 @@
                                 @else
                                     <td  class="font-weight-bold text-primary" style="text-align: center;">{{ Auth::user()->rol }}</td>
                                 @endif                            
-                            <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
+                            <td style="text-align: center;">{{ $reserva->nombreSala}}</td>
                             <td style="text-align: center;">
                                 <div class="panel-group">
                                     <div class="panel panel-default">
@@ -146,7 +146,7 @@
                 <tr>
                     <th scope="col" style="text-align: center;">Rut Usuario</th>
                     <th scope="col" style="text-align: center;">Rol</th>
-                    <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
+                    <th scope="col" style="text-align: center;">Nombre Sala</th>
                     <th scope="col" style="text-align: center;">Modulos Reservados</th>
                     <th scope="col" style="text-align: center;">Fecha Inicio</th>
                     <th scope="col" style="text-align: center;">Fecha Fin</th>
@@ -168,7 +168,8 @@
                                 @endif
                             @endif
                         @endforeach
-                        <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
+                        @dd($reserva)
+                        <td style="text-align: center;">{{ $reserva->nombreSala}}</td>
                         <td style="text-align: center;">
                             <div class="panel-group">
                                 <div class="panel panel-default">

@@ -11,8 +11,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
-                    <th scope="col" style="text-align: center;">Nombre de la Sala</th>
+                    <th scope="col" style="text-align: center;">Nombre Sala</th>
                     <th scope="col" style="text-align: center;">Capacidad Máxima</th>
                     <th scope="col" style="text-align: center;">Tipo de Laboratorio</th>
                     <th scope="col" style="text-align: center;">Acciones</th>
@@ -22,7 +21,6 @@
                 @foreach ($labs as $lab)
                     <tr>
                         <th scope="row" style="text-align: center;">{{ $lab->codigoLab }}</th>
-                        <td style="text-align: center;">{{ $lab->nombreSala}}</td>
                         <td style="text-align: center;">{{ $lab->capacidadMax}}</td>
                         <td style="text-align: center;">{{ $lab->tipoLab}}</td>
                         <td style="text-align: center;">
@@ -56,7 +54,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col" style="text-align: center;">Codigo Laboratorio</th>
                 <th scope="col" style="text-align: center;">Nombre de la Sala</th>
                 <th scope="col" style="text-align: center;">Capacidad Máxima</th>
                 <th scope="col" style="text-align: center;">Tipo de Laboratorio</th>
@@ -67,7 +64,6 @@
             @foreach ($labs as $lab)
                 <tr>
                     <th scope="row" style="text-align: center;">{{ $lab->codigoLab }}</th>
-                    <td style="text-align: center;">{{ $lab->nombreSala}}</td>
                     <td style="text-align: center;">{{ $lab->capacidadMax}}</td>
                     <td style="text-align: center;">{{ $lab->tipoLab}}</td>
                     <td style="text-align: center;">

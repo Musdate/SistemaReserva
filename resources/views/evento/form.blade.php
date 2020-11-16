@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="codigoLab">Codigo Laboratorio</label>
+                    <label for="codigoLab">Nombre Sala</label>
                     <select class="custom-select d-block w-100" id="codigoLab" name="codigoLab" required>
                         @if (old('codigoLab'))
                             <option value="{{old('codigoLab')}}">{{old('codigoLab')}}</option>

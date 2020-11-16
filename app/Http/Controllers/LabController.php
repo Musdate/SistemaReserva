@@ -25,14 +25,14 @@ class LabController extends Controller{
     public function store(){
 
         $data = request()->validate([
-            'codigoLab' => 'required',
+            'codigoLab' => '',
             'nombreSala' => 'required',
             'capacidadMax' => 'required',
             'tipoLab' => 'required'
         ]);
 
         Laboratorio::create([
-            'codigoLab' => $data['codigoLab'],
+            'codigoLab' => $data['nombreSala'],
             'nombreSala' => $data['nombreSala'],
             'capacidadMax' => $data['capacidadMax'],
             'tipoLab' => $data['tipoLab']

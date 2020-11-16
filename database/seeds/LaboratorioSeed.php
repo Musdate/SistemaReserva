@@ -7,22 +7,22 @@ class LaboratorioSeed extends Seeder{
 
     public function run(){
         DB::table('laboratorios')->insert([
-            'codigoLab' => 'A01',
+            'codigoLab' => 'Sala 100',
             'nombreSala' => 'Sala 100',
             'capacidadMax' => '50',
             'tipoLab' => 'Informatica',
         ]);
 
         DB::table('laboratorios')->insert([
-            'codigoLab' => 'A02',
+            'codigoLab' => 'Sala 101',
             'nombreSala' => 'Sala 101',
             'capacidadMax' => '50',
             'tipoLab' => 'Informatica',
         ]);
 
         DB::table('laboratorios')->insert([
-            'codigoLab' => 'B01',
-            'nombreSala' => 'Sala 103',
+            'codigoLab' => 'Sala 102',
+            'nombreSala' => 'Sala 102',
             'capacidadMax' => '50',
             'tipoLab' => 'Quimica',
         ]);
