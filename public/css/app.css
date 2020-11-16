@@ -11110,4 +11110,78 @@ a.text-dark:focus {
       border: solid #e02222 4px;
       transition: .5s;
     }
-  
+    @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+    .Cuerpo{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(UCM.jpg) no-repeat;
+        background-size: cover; 
+    }
+    .CajaLogin-Exterior{
+        width: 560px;
+        height: 450px;
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        border-radius: 30%;
+        background-color:rgb(250, 250, 250);opacity:0.8;
+    }
+    .CajaLogin{
+        width: 280px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: black;
+    }
+    .CajaLogin h1{
+        float: left;
+        font-size: 40px;
+        border-bottom: 6px solid #1d7df9;
+        margin-bottom: 50px;
+        padding: 13px 0;
+    }
+    .TextoCajas{
+        width: 100%;
+        overflow: hidden;
+        font-size: 20px;
+        padding: 8px 0;
+        margin: 8px 0;
+        border-bottom: 1px solid #1d7df9;
+    }
+    .TextoCajas i{
+        width: 26px;
+        float: left;
+        text-align: center;
+    }
+    .TextoCajas input{
+        border: none;
+        outline: none;
+        background: none;
+        color: #000000;
+        font-size: 18px;
+        width: 80%;
+        float: left;
+        margin: 0 10px;
+    }
+    .BotonLogin{
+        width: 100%;
+        background: none;
+        border: 2px solid #1d7df9;
+        color: #1d7df9;
+        padding: 5px;
+        font-size: 18px;
+        margin: 12px 0;
+        cursor: pointer;
+    }
+
+    .BotonLogin:hover, .BotonLogin:active, .BotonLogin:focus {
+      border-color: #c21919;
+    }
+    .BotonLogin:hover span, .BotonLogin:active span, .BotonLogin:focus span {
+      color: #c21919;
+    }
+    .BotonLogin:active span, .BotonLogin:focus span {
+      color: #1d7df9;
+    }

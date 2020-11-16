@@ -1,5 +1,6 @@
 body {
-    background: radial-gradient(circle, #fff, #bbb);
+    background: url(UCM.jpg) no-repeat;
+    background-size: cover;
     color: #666666;
     font-family: 'RobotoDraft', 'Roboto', sans-serif;
     font-size: 14px;
@@ -440,4 +441,12 @@ body {
       bottom: 30px;
       opacity: 0;
     }
+  }
+  .navbar-dark .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-dark .navbar-brand:hover,
+  .navbar-dark .navbar-brand:focus {
+    color: rgb(60, 154, 231)
   }
