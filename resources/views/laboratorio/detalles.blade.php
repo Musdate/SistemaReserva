@@ -9,10 +9,10 @@
     <h2 style="margin-left: 25px">Informaciones:</h2>
     <ul>
         <li>
-            <a class="badge badge-light" style="width: 63px;">Modulo 1</a> = Disponible
+            <a class="badge badge-light" style="width: 63px;">__</a> = Disponible
         </li>
         <li>
-            <a class="badge badge-danger" style="width: 63px;">Modulo 1</a> = Reservado
+            <a class="badge badge-danger" style="width: 63px;">__</a> = Reservado
         </li>
     </ul>
 

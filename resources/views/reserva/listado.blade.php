@@ -33,7 +33,7 @@
                                 @else
                                     <td  class="font-weight-bold text-primary" style="text-align: center;">{{ Auth::user()->rol }}</td>
                                 @endif                            
-                            <td style="text-align: center;">{{ $reserva->nombreSala}}</td>
+                            <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
                             <td style="text-align: center;">
                                 <div class="panel-group">
                                     <div class="panel panel-default">
@@ -168,8 +168,7 @@
                                 @endif
                             @endif
                         @endforeach
-                        @dd($reserva)
-                        <td style="text-align: center;">{{ $reserva->nombreSala}}</td>
+                        <td style="text-align: center;">{{ $reserva->codigoLab}}</td>
                         <td style="text-align: center;">
                             <div class="panel-group">
                                 <div class="panel panel-default">
